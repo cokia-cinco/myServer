@@ -30,7 +30,9 @@ class FriendController extends Controller
         $friend->friend_id = $request->get('friend_id');
         $friend->type= 0 ;
         $res = $friend->save();
-        dd($res);
+        if ($res){
+            return $this->ResponseJson(true,'发送添加请求成功');
+        }
     }
 
     /**
@@ -92,9 +94,9 @@ class FriendController extends Controller
         $data = User::where('id2', '=', $request->get('id'))->where('password', '=', $request->get('password'))->get();
         if (count($data) == 1) {
             $api_token = md5(time());
-            User::where('ID', '=', $request->get('id'))->update(['api_token' => $api_token]);
+            $token = User::where('ID', '=', $request->get('id'))->update(['api_token' => $api_token]);
+            $friends[] = $token;
             $friend_id = Friend::where('user_id','=',$request->get('id'))->get();
-            $friends=[];
             foreach ($friend_id as $value){
                 $friend_info = User::find($value['friend_id'],['id','name','tel','sex','avatar']);
                 if (!is_null($friend_info)){
@@ -124,16 +126,24 @@ class FriendController extends Controller
                 ->get();
             if (count($res)== 1) {
                 //查询聊天
-                $msg = Message::where('id','=',$res['0']['id'])->get();
+                $values = Chat::where('user_id', '=',$request->get('friend_id'))
+                    ->where('another_id', '=', $request->get('id'))
+                    ->where('another_delete', '=', '0')
+                    ->first();
+                $msg[] = Message::where('id','=',$res['0']['id'])->get();
+                $msg[] = Message::where('id','=',$values['id'])->get();
                 return $this->ResponseJson(true,$msg,1);
             } else {
-                Chat::insert(['$friend_list_id'=>$data['id'],
+                $ros = Chat::insert(['$friend_list_id'=>$data['id'],
                     'user_id'=> $request->get('id'),
                     'another_id' => $request->get('friend_id'),
                     'is_online' => 0,
                     'user_delete' => 0,
                     ]);
-                return $this->ResponseJson(true,'',1);
+                if($ros){
+                    $datas = User::find($friend_id,['id','name','tel','sex','avatar']);
+                }
+                return $this->ResponseJson(true,$datas,1);
             }
         }else{
             return $this->ResponseJson(false,'对方不是你的好友');
@@ -165,6 +175,16 @@ class FriendController extends Controller
                             'unread'=>0,
                             'user_delete'=>0
                          ]);
+                    }
+                }else{
+                    $friend_request = Friend::where('friend_id','=',$id)
+                        ->where('type','=',0)
+                        ->get();
+                    if (!is_null($friend_request)){
+                        foreach ($friend_request as $value){
+                            $friend_request_list = User::find($value['id'],['id','name','tel','sex','avatar']);
+                        }
+                        return $this->ResponseJson(true,$friend_request_list,'有新的好友添加请求');
                     }
                 }
             }
@@ -205,7 +225,7 @@ class FriendController extends Controller
         $data  = $message->save();
         if($data){
             $bool = Chat::where('id','=',$chat_id)->increment('unread');
-            dd($bool);
+            return $this->ResponseJson(true,'发送成功');
         }
     }
 
@@ -239,10 +259,13 @@ class FriendController extends Controller
         ->where('another_id','=',$data['user_id'])
         ->where('another_delete','=',0)
         ->update(['another_delete'=>1]);
-        dd($res&&$ros);
+        if($res&&$ros){
+            return $this->ResponseJson(true,'删除成功');
+        }
+
     }
 
-
+//添加好友请求
     public function processing_request(Request $request)
     {
         $id = $request->get('id');
@@ -254,6 +277,7 @@ class FriendController extends Controller
                     ->update(['type'=>1]);
             if($data){
                 Friend::insert(['user_id'=>$id,'friend_id'=>$friend_id,'type'=>1]);
+                return $this->ResponseJson(true,'等待对方同意');
             }
         }
     }

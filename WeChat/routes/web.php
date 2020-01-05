@@ -24,6 +24,8 @@
                 Route::get('/message','FriendController@message');
                 //删除聊天关系
                 Route::get('/delete_chat','FriendController@delete_chat');
+                //添加好友请求
+                Route::get('/processing_request','FriendController@processing_request');
 
             });
         });

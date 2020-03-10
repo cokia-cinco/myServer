@@ -1,0 +1,318 @@
+	body{
+		margin: 0;
+		padding: 0;
+		height: 2000px;
+		background-color: #ddd;
+	}
+	.overall{
+		width: 1400px;
+		margin: 0 auto;
+	}
+	.cf:after{
+		display:block;
+		clear:both;content:"";
+		visibility:hidden;
+		height:0;
+	}
+	.nav{
+		background-color: #000;
+		height: 4rem;
+		width: 100%;
+		position: fixed;
+		top: 0;
+		z-index: 1;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+	.nav .nav-sign{
+		padding-left: 1rem;
+		color: orange;
+		font-size: 2rem;
+		line-height: 3rem;
+	}
+	.nav .nav-job{
+		width: 100%;
+		background-color: #000;
+		font-size: 1.5rem;
+		line-height: 4rem;
+		color: #fff;
+		position: absolute;
+		z-index: 1;
+	}
+	.nav .icon-nav-overview{
+		width: 4rem ;
+		float: right;
+		color: #999;
+		text-align: center;
+		cursor: pointer;
+	}
+	.nav .nav-overview{
+		width: 100%;
+		list-style: none;
+		margin: 0;
+		background-color: #000;
+		color: #fff;
+		padding: 1rem 3rem;
+		position: absolute;
+		top: 4rem;
+		transform: translateY(-100%);
+		transition: all 800ms;
+	}
+	.nav .nav-overview li{
+		height: 2rem;
+		line-height: 2rem;
+		font-weight: 100;
+	}
+	.personal{
+		margin-top: 4rem; 
+		background-image: url("../picture/code.jpg");
+		background-size: 100%;
+		background-repeat: no-repeat;
+		position: relative;
+		/*height: 52rem;*/
+		padding-bottom: 15rem;
+	}
+	.avator{
+		width: 10rem;
+		height: 10rem;
+		border-radius: 10rem;
+		overflow: hidden;
+		position: absolute;
+		top: 30%;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+	.avator:hover{
+		transform: scale(2,2) translateX(-20%);
+	}
+	.avator img{
+		width: 150%;
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%,-50%);
+	}
+	.personal .personal-job{
+		text-align: center;
+		color: orange;
+		font-size: 3rem;
+		padding-top: 30%;
+	}
+	.personal .personal-job .lang{
+		color: #fff;
+		margin: 0 .5rem;
+	}
+	.personal .personal-job .personal-sign{
+		text-align: center;
+	}
+	.personal .motto{
+		width: 24rem;
+		margin: 1rem auto;
+	}
+	.personal .motto span{ 
+		color: #fff;
+		font-size: 1.5rem;
+	}
+	.basic-info{
+		background-image: linear-gradient(#666, #333);
+		padding-bottom: 3rem;
+	}
+	.basic-info ul{
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		padding: 0 10%;
+	}
+	.basic-info ul li{
+		width: 25%;
+		float:left;
+		margin: 1rem 0;
+		position: relative;
+	}
+	.basic-info ul li .icon-border{
+		width: 8rem;
+		height: 8rem;
+		border-radius: 4rem;
+		background-color: #333;
+		margin: 0 auto;
+		text-align: center;
+		transition: all 500ms;
+		margin-top: 1rem;
+		cursor: pointer;
+	}
+	.basic-info ul li .icon-basic-info{
+		font-size: 6rem;
+		line-height: 8rem;
+		color: #e5e5e5;
+	}
+	.icon-border:hover{
+		transform: scale(1.2,1.2);
+	}
+	.icon-border:hover .icon-basic-info{
+		color: orange;
+	}
+	.basic-info ul li p{
+		margin: 0;
+	}
+	.basic-info ul li .info-title{
+		color: orange;
+		font-size: 1.2rem;
+		text-align: center;
+		margin-top: 2rem;	
+	}
+	.basic-info ul li .info-details{
+		color: #bbb;
+		text-align: center;
+		margin: .5rem 0;
+	}
+	h3{
+		margin: 0;
+		padding: 4rem 0 1rem;
+		text-align: center;
+		font-size: 2rem;
+		color: #fff;
+		font-weight: normal;
+	}
+	.title-o{
+		color: #666;
+	}
+	h3 span{
+		margin: 0 .5rem;
+		font-size: 1.9rem;
+		font-weight: 300;
+	}
+	.boder-orange{
+		display: block;
+		margin: 0 auto;
+		height: 0;
+		width: 5rem;
+		border: .1rem solid orange;
+	}
+	.skill{
+		background-image: url("../picture/ubuntu.jpg");
+		background-size: 100%;
+		background-repeat: no-repeat;
+		transform: rotateY(180deg);
+		padding-bottom: 2rem;
+	}
+	.skill h3{
+		transform: rotateY(180deg);
+	}
+	.skill .group{
+		width: 40%;
+		margin: 2rem 5rem 0;
+		padding: 2rem;
+		transform: rotateY(180deg);
+		background-color: rgba(255,200,100,.5);
+		box-shadow: .3rem 0px 20px #000;
+	}
+	.skill .group ul{
+		list-style: none;
+		margin: 0;
+		padding: 1rem 0 0;
+		color: #333;
+	}
+	.work{
+		background-color: #fff;
+		padding: 2rem 0;
+	}
+	.work ul{
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+	.work .work-all{
+		padding: 2rem 3rem;
+	}
+	.work ul li{
+		width: 33%;
+		float: left;
+		position: relative;
+	}
+	.work .img-border{
+		width: 10rem;
+		height: 10rem;
+		border-radius: 10rem;
+		overflow: hidden;
+		position: relative;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+	.work .img-border img{
+		width: 150%;
+		height: 100%;
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%,-50%);
+	}
+	.work .work-name{
+		text-align: center;
+		font-size: 1.2rem;
+	}
+	.work .work-other p{
+		padding-left: 7rem;
+		color: #666;
+		padding-top: : .5rem;
+	}
+	.comment-box{
+		width: 50%;
+		margin: 5rem auto;
+		overflow: hidden;
+	}
+	.comment-list{
+		list-style: none;
+		width: 400%;
+	}
+	.comment-list li{	
+		width: 25%;
+		float: left;
+		color: #fff;
+		text-align: center;
+		font-size: 1.2rem;
+	}
+	.bgi{
+		width: 1400px;
+		position: fixed;
+		bottom: 0;
+		z-index: -1;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+	.bgi img{
+		width: 100%;
+	}
+	.tel{
+		background-color: #fff;
+	}
+	.tel ul{
+		margin: 0;
+		list-style: none;
+		padding: 2rem 10% 5rem;
+	}
+	.tel li{
+		width: 25%;
+		float: left;
+		text-align: center;
+	}
+	.tel .icon-tel{
+		color: orange;
+		font-size: 3rem;
+	}
+	.tel .tel-content{
+		color: #666;
+	}
+	.bottom{
+		padding-left: 15%; 
+		background-color: #333;
+	}
+	.bottom .Copyright{
+
+	}
+	.bottom .Copyright p{
+		margin: 0;
+		padding: 2rem 0;
+		color: #fff;
+		font-size: .7rem;
+		font-weight: 100;
+	}

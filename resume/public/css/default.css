@@ -5,7 +5,7 @@
 		background-color: #ddd;
 	}
 	.overall{
-		width: 1400px;
+		min-width: 1000px;
 		margin: 0 auto;
 	}
 	.cf:after{
@@ -64,13 +64,16 @@
 		font-weight: 100;
 	}
 	.personal{
-		margin-top: 4rem; 
-		background-image: url("../picture/code.jpg");
+		margin-top: 4rem;
 		background-size: 100%;
 		background-repeat: no-repeat;
 		position: relative;
-		/*height: 52rem;*/
-		padding-bottom: 15rem;
+		overflow: hidden;
+	}
+	.personal .img-border img{
+		width: 100%;
+		min-width: 1300px;
+		display: block;
 	}
 	.avator{
 		width: 10rem;
@@ -82,9 +85,6 @@
 		left: 50%;
 		transform: translateX(-50%);
 	}
-	.avator:hover{
-		transform: scale(2,2) translateX(-20%);
-	}
 	.avator img{
 		width: 150%;
 		position: absolute;
@@ -92,11 +92,16 @@
 		top: 50%;
 		transform: translate(-50%,-50%);
 	}
+	.personal .personal-text{
+		position: absolute;
+		top: 60%;
+		left: 50%;
+		transform: translateX(-50%);
+	}
 	.personal .personal-job{
 		text-align: center;
 		color: orange;
 		font-size: 3rem;
-		padding-top: 30%;
 	}
 	.personal .personal-job .lang{
 		color: #fff;
@@ -189,21 +194,31 @@
 		border: .1rem solid orange;
 	}
 	.skill{
-		background-image: url("../picture/ubuntu.jpg");
 		background-size: 100%;
 		background-repeat: no-repeat;
 		transform: rotateY(180deg);
-		padding-bottom: 2rem;
+		position: relative;
+	}
+	.skill img{
+		width:100%;
+		display: block;
+	}
+	.skill .skill-nav{
+		position: absolute;
+		top: 0;
+		width:100%;
 	}
 	.skill h3{
 		transform: rotateY(180deg);
 	}
 	.skill .group{
+		position: absolute;
 		width: 40%;
-		margin: 2rem 5rem 0;
+		top: 10rem;
+		left: 4rem;
 		padding: 2rem;
 		transform: rotateY(180deg);
-		background-color: rgba(255,200,100,.5);
+		background-color: rgba(255,200,100,.6);
 		box-shadow: .3rem 0px 20px #000;
 	}
 	.skill .group ul{
@@ -251,12 +266,12 @@
 		font-size: 1.2rem;
 	}
 	.work .work-other p{
-		padding-left: 7rem;
+		text-align: center;
 		color: #666;
-		padding-top: : .5rem;
+		padding-top: .5rem;
 	}
 	.comment-box{
-		width: 50%;
+		width: 700px;
 		margin: 5rem auto;
 		overflow: hidden;
 	}
@@ -272,7 +287,7 @@
 		font-size: 1.2rem;
 	}
 	.bgi{
-		width: 1400px;
+		width: 100%;
 		position: fixed;
 		bottom: 0;
 		z-index: -1;
@@ -298,6 +313,10 @@
 	.tel .icon-tel{
 		color: orange;
 		font-size: 3rem;
+		cursor: pointer;
+	}
+	.tel .icon-tel:hover{
+		transform: translateY(-.25rem);
 	}
 	.tel .tel-content{
 		color: #666;

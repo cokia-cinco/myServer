@@ -1,0 +1,93 @@
+.nav{
+    height: 8rem;!important;
+}
+.nav .nav-job{
+    line-height: 8rem;
+    font-size: 3rem;
+}
+.nav .nav-overview{
+    transform: translateY(-106%);
+}
+.nav .nav-overview li{
+    height: 6rem;
+    line-height: 6rem;
+    font-size: 3rem;
+    font-weight: 100;
+}
+.nav .icon-nav-overview{
+    font-size: 4rem;
+    width: 8rem ;
+    float: right;
+    color: #999;
+    text-align: center;
+    cursor: pointer;
+}
+.personal{
+    margin-top: 3rem;
+}
+.personal .avator{
+    width: 20rem;
+    height: 20rem;
+    top: 15%;
+}
+.personal .personal-job{
+    top: 70%;
+    text-align: center;
+    color: orange;
+    font-size: 4rem;
+}
+.personal .motto{
+    width: 50rem;
+}
+.personal .motto span{
+    font-size: 3rem;
+}
+h3{
+    margin: 0;
+    padding: 2rem 0 1rem;
+    text-align: center;
+    font-size: 4rem;
+    color: #fff;
+    font-weight: normal;
+}
+.title-o{
+    color: #666;
+}
+h3 span{
+    margin: 0 .5rem;
+    font-size: 3.8rem;
+    font-weight: 300;
+}
+.basic-info ul li {
+    width: 50%;
+}
+.basic-info ul li .icon-border {
+    width: 15rem;
+    height: 15rem;
+    border-radius: 9rem;
+}
+.basic-info ul li .icon-basic-info {
+    font-size: 12rem;
+    line-height: 15rem;
+}
+.basic-info ul li .info-title {
+    font-size: 3rem;
+    margin-top: 2rem;
+}
+.basic-info ul li .info-details {
+    font-size: 2rem;
+    margin: .5rem 0;
+}
+.skill .group {
+    width: 80%;
+    padding: 2rem;
+}
+.skill img{
+    width: 2000px;
+}
+.skill .group ul li{
+    font-size: 1.5rem;
+}
+.bgi{
+    width: 170%;
+}

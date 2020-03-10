@@ -2,9 +2,11 @@
 <html>
 <head>
 	<title>Cin的个人简历</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<link rel="stylesheet" type="text/css" href="./public/icon/iconfont.css">
 	<script src="./public/js/jquery-1.3.2.min.js"></script>
-	<link rel="stylesheet" type="text/css" href="./public/css/default.CSS">
+	<link rel="stylesheet" type="text/css" href="./public/css/default.css">
+	<link type="text/css" rel="stylesheet" href="./public/css/middle.css" media="screen and (max-width:1000px)" />
 </head>
 <body>
 	<div class="overall">
@@ -25,22 +27,26 @@
 		</div>
 
 		<div class="personal">
+			<div class="img-border">
+				<img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1583834488168&di=ad8900322a7c4e2a267d7316a78b9233&imgtype=0&src=http%3A%2F%2Fup.enterdesk.org%2Fpic_source%2Fe9%2F11%2F29%2Fe9112901f516878cbb13183054483c03.jpg" alt="">
+			</div>
 			<div class="avator">
 				<img src="./public/picture/avator.jpg">
 			</div>
-			<div class="personal-job">
+			<div class="personal-text">
+				<div class="personal-job">
 				<span>
 					<span class="lang">PHP</span>
 					<span class="personal-sign">&</span>
 					<span class="lang">Java</span>
 					<span>攻城狮</span>
 				</span>
-			</div>
-			<div class="motto">
-				<span>我们都是导演 , 而电脑只是个烂演员</span>
+				</div>
+				<div class="motto">
+					<span>我们都是导演 , 而电脑只是个烂演员</span>
+				</div>
 			</div>
 		</div>
-
 	<!-- 基本资料开始 -->
 		<div class="basic-info">
 			<h3 class="title-w"><span>基本</span>资料</h3>
@@ -84,8 +90,11 @@
 
 	<!-- 专业技能开始 -->
 		<div class="skill cf">
-			<h3 class="title-w">专业<span>技能</span></h3>
-			<span class="boder-orange"></span>
+			<div class="skill-nav">
+				<h3 class="title-w">专业<span>技能</span></h3>
+				<span class="boder-orange"></span>
+			</div>
+			<img src="http://www.pianshen.com/images/147/b6d4494d542ac028d7e1d0197b7b9ddb.JPEG" alt="">
 			<div class="group">
 				<ul class="cf">
 					<li>
@@ -191,7 +200,7 @@
 						<p class="work-name">济南展诚餐饮有限公司</p>
 						<div class="work-other">
 							<p class="work-time">工作时间: 2016.10-2017.08</p>
-							<p>职位: 小型餐饮店店长</p>
+							<p>工作职位: 小型餐饮店店长</p>
 							<p>工作内容: 综合类型,处理一切问题</p>
 							<p>工作地点: 济南市历下区窑头路</p>
 						</div>
@@ -203,7 +212,7 @@
 						<p class="work-name">自运营餐饮</p>
 						<div class="work-other">
 							<p class="work-time">工作时间: 2017.8-2018.12</p>
-							<p>职位: 自家的店铺</p>
+							<p>工作职位: 自家的店铺</p>
 							<p>工作内容: 处理一切店铺相关</p>
 							<p>工作地点: 宿迁市宿城区楚街</p>
 						</div>
@@ -215,7 +224,7 @@
 						<p class="work-name">徐工重型机械有限公司</p>
 						<div class="work-other">
 							<p class="work-time">工作时间: 2019.2-2019.08</p>
-							<p>职位: 机械制造</p>
+							<p>工作职位: 机械制造</p>
 							<p>工作内容: 涂装分厂普工</p>
 							<p>工作地点: 徐州鼓楼区高新路</p>
 						</div>
@@ -270,20 +279,32 @@
 			</div>
 		</div>
 		<!-- 最下面的背景图片 -->
-		<div class="bgi"><img src="./public/picture/phper.jpg"></div>
+		<div class="bgi"><img src="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=3748234486,1265470788&fm=26&gp=0.jpg"></div>
 	</div>
 </body>
 <script type="text/javascript">
 	$(document).ready(function(){
 		let status = false;
   		$(".icon-nav-overview").click(function(){
-  			if (!status) {
-  				$(".nav-overview").css("transform","translateY(0%)")
-  				status = !status
-  			}else{
-  				$(".nav-overview").css("transform","translateY(-100%)")
-  				status = !status
-  			}
+
+  			if (($(window).width()>1000)){
+				if (!status) {
+					$(".nav-overview").css("transform","translateY(0%)")
+					status = !status
+				}else{
+					$(".nav-overview").css("transform","translateY(-100%)")
+					status = !status
+				}
+			} else{
+				if (!status) {
+					$(".nav-overview").css("transform","translateY(10%)")
+					status = !status
+				}else{
+					$(".nav-overview").css("transform","translateY(-106%)")
+					status = !status
+				}
+			}
+
   		});
   		let index = 1;//当前为第几张图片
 		let timeoutId;

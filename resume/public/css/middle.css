@@ -78,15 +78,32 @@ h3 span{
     font-size: 2rem;
     margin: .5rem 0;
 }
+.skill{
+    overflow: hidden;
+    transform: none;
+}
+.skill h3{
+    transform: none;
+}
 .skill .group {
     width: 80%;
     padding: 2rem;
+    transform: none;
 }
 .skill img{
     width: 2000px;
 }
 .skill .group ul li{
     font-size: 1.5rem;
+}
+.comment-box {
+    width: 90%;
+    margin: 5rem auto;
+    overflow: hidden;
+}
+.comment-list li{
+    -webkit-text-size-adjust: none;
+    font-size: 1.85rem;
 }
 .bgi{
     width: 170%;

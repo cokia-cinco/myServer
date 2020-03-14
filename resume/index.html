@@ -25,7 +25,6 @@
 				<li>联系方式</li>
 			</ul>
 		</div>
-
 		<div class="personal">
 			<div class="img-border">
 				<img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1583834488168&di=ad8900322a7c4e2a267d7316a78b9233&imgtype=0&src=http%3A%2F%2Fup.enterdesk.org%2Fpic_source%2Fe9%2F11%2F29%2Fe9112901f516878cbb13183054483c03.jpg" alt="">
@@ -89,12 +88,12 @@
 	<!-- 基本资料结束 -->
 
 	<!-- 专业技能开始 -->
-		<div class="skill cf">
+		<div class="skill">
 			<div class="skill-nav">
 				<h3 class="title-w">专业<span>技能</span></h3>
-				<span class="boder-orange"></span>
+				<span class="border-orange"></span>
 			</div>
-			<img src="http://www.pianshen.com/images/147/b6d4494d542ac028d7e1d0197b7b9ddb.JPEG" alt="">
+			<img src="./public/picture/ubuntu.jpg" alt="">
 			<div class="group">
 				<ul class="cf">
 					<li>
@@ -314,22 +313,28 @@
 		    moving = true;
 		    let $comment = $("#comment-id");
 		    let left = parseInt($comment.css("margin-left"));
-		    left += dis;
-		    $comment.animate({marginLeft:left},1000,"linear",function(){
-			    if(left > 0){
-			        left = -1400;
-			    }
-			    if(left < -1400){
-			        left = 0;
+			left += dis;
+			$comment.animate({marginLeft:left},1000,"linear",function(){
+				if(left > 0){
+					left = parseInt(dis)*2;
+					console.log(left)
+				}
+				if(left < parseInt(dis)*2){
+					left = 0;
 			    }
 			    $comment.css("margin-left",left + "px");
 			    moving = false;
 			});
-  		}
-  		function autoMove(){
+		}
+		function autoMove(){
 		    index += 1;
-		    move(-700);
-		    timeoutId = setTimeout(autoMove,5000);
+			if (($(window).width()>1000)){
+				timeoutId = setTimeout(autoMove,5000);
+				move(-700);
+			}else{
+				timeoutId = setTimeout(autoMove,5000);
+				move(-900);
+			}
 		}
 	});
 </script>

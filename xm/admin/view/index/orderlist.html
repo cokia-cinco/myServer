@@ -1,0 +1,385 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>启航纺织网站管理系统</title>
+<link href="css/public.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/global.js"></script>
+<script type="text/javascript">
+$(function(){
+  
+  $("input[type='button']").click(function(){
+    var len = $("input.one[type='checkbox']:checked").length;
+    var action=$(this).attr('id');
+    if(len>0){
+      $('#form').attr("action","action.php?act="+action);
+      $('#form').submit();
+    }else{
+      alert("请选择需要操作的信息!");
+    }
+  });
+})
+</script>
+</head>
+<body>
+<div id="dcMain1"> 
+<div id="urHere">启航纺织 管理中心</div>  <div id="index" class="mainBox" style="padding-top:18px;height:auto!important;height:550px;min-height:550px;">
+   <h3>
+   <a href="javascript:location.reload();" class="actionBtn" style="margin-right:10px;">刷新</a>订单管理</h3>  
+   
+   <div class="indexBox">
+    
+    <form name="" id="form" action="productlist.php" method="post">
+     
+     <table width="100%" border="0" style="margin-top:20px;" cellspacing="0" cellpadding="7" class="tableBasic">
+      <tr>
+      <td colspan="7">
+      订单号：818815333636382311  
+      订单时间：2018-08-04 14:20:38 
+      订单状态：<b class="blue mr15">已发货</b>      </td>
+      </tr>
+      <tr>
+       <th width="50" >序号</th>
+       <th width="20%">商品名称</th>
+       <th width="20%">缩略图</th>
+       <th width="10%">价格</th>       
+       <th width="15%">数量</th>
+       <th width="15%">小计</th>
+       <th width="13%"> </th>
+      </tr>
+            <tr style="text-align:center;">
+        <td>1</td>
+        <td>人棉	民族风 70522-39</td>
+        <td><img src="/uploadfiles/image/20171031/9a8b5caf2c61f91fa1ccdcd8adea18a9.png" style="width:160px;height:120px;"/></td>
+        <td>￥12.00</td>
+        <td>2</td>
+        <td>￥24.00</td>
+        <td></td>
+      </tr>
+      
+      
+     </table>
+   
+     <table width="100%" border="0" style="margin-top:20px;" cellspacing="0" cellpadding="7" class="tableBasic">
+      <tr>
+      <td colspan="7">
+      订单号：818815333635088031  
+      订单时间：2018-08-04 14:18:28 
+      订单状态：<b class="red mr15">未处理</b><a href="fahuo.php?ordernum=818815333635088031">发货</a>      </td>
+      </tr>
+      <tr>
+       <th width="50" >序号</th>
+       <th width="20%">商品名称</th>
+       <th width="20%">缩略图</th>
+       <th width="10%">价格</th>       
+       <th width="15%">数量</th>
+       <th width="15%">小计</th>
+       <th width="13%"> </th>
+      </tr>
+            <tr style="text-align:center;">
+        <td>1</td>
+        <td>人棉	民族风 70522-39</td>
+        <td><img src="/uploadfiles/image/20171031/9a8b5caf2c61f91fa1ccdcd8adea18a9.png" style="width:160px;height:120px;"/></td>
+        <td>￥12.00</td>
+        <td>2</td>
+        <td>￥24.00</td>
+        <td></td>
+      </tr>
+      
+      
+     </table>
+   
+     <table width="100%" border="0" style="margin-top:20px;" cellspacing="0" cellpadding="7" class="tableBasic">
+      <tr>
+      <td colspan="7">
+      订单号：818815333626091415  
+      订单时间：2018-08-04 14:03:29 
+      订单状态：<b class="red mr15">未处理</b><a href="fahuo.php?ordernum=818815333626091415">发货</a>      </td>
+      </tr>
+      <tr>
+       <th width="50" >序号</th>
+       <th width="20%">商品名称</th>
+       <th width="20%">缩略图</th>
+       <th width="10%">价格</th>       
+       <th width="15%">数量</th>
+       <th width="15%">小计</th>
+       <th width="13%"> </th>
+      </tr>
+            <tr style="text-align:center;">
+        <td>1</td>
+        <td>现货	几何	 妈妈装  纬编 单面 60314-20</td>
+        <td><img src="/uploadfiles/image/20171031/9400701eb6805911bf97e09384649957.png" style="width:160px;height:120px;"/></td>
+        <td>￥34.00</td>
+        <td>1</td>
+        <td>￥34.00</td>
+        <td></td>
+      </tr>
+      
+      
+     </table>
+   
+     <table width="100%" border="0" style="margin-top:20px;" cellspacing="0" cellpadding="7" class="tableBasic">
+      <tr>
+      <td colspan="7">
+      订单号：818815333501039088  
+      订单时间：2018-08-04 10:35:03 
+      订单状态：<b class="gray mr15">已完成</b>      </td>
+      </tr>
+      <tr>
+       <th width="50" >序号</th>
+       <th width="20%">商品名称</th>
+       <th width="20%">缩略图</th>
+       <th width="10%">价格</th>       
+       <th width="15%">数量</th>
+       <th width="15%">小计</th>
+       <th width="13%"> </th>
+      </tr>
+            <tr style="text-align:center;">
+        <td>1</td>
+        <td>人棉	几何	  70522-57</td>
+        <td><img src="/uploadfiles/image/20171031/af98b1947b516567061ca563181df679.png" style="width:160px;height:120px;"/></td>
+        <td>￥10.00</td>
+        <td>2</td>
+        <td>￥20.00</td>
+        <td></td>
+      </tr>
+            <tr style="text-align:center;">
+        <td>2</td>
+        <td>梭织  70305-16</td>
+        <td><img src="/uploadfiles/image/20171031/af7a9f93db64f36873b7016efd851bfa.png" style="width:160px;height:120px;"/></td>
+        <td>￥35.00</td>
+        <td>1</td>
+        <td>￥35.00</td>
+        <td></td>
+      </tr>
+      
+      
+     </table>
+   
+     <table width="100%" border="0" style="margin-top:20px;" cellspacing="0" cellpadding="7" class="tableBasic">
+      <tr>
+      <td colspan="7">
+      订单号：818815330233648108  
+      订单时间：2018-07-31 15:49:24 
+      订单状态：<b class="red mr15">未处理</b><a href="fahuo.php?ordernum=818815330233648108">发货</a>      </td>
+      </tr>
+      <tr>
+       <th width="50" >序号</th>
+       <th width="20%">商品名称</th>
+       <th width="20%">缩略图</th>
+       <th width="10%">价格</th>       
+       <th width="15%">数量</th>
+       <th width="15%">小计</th>
+       <th width="13%"> </th>
+      </tr>
+            <tr style="text-align:center;">
+        <td>1</td>
+        <td>人棉	几何	印花 棉感 70522-47</td>
+        <td><img src="/uploadfiles/image/20171031/0d0dbc03768868fbd5af2d41a4a8af2d.png" style="width:160px;height:120px;"/></td>
+        <td>￥7.80</td>
+        <td>2</td>
+        <td>￥15.60</td>
+        <td></td>
+      </tr>
+      
+      
+     </table>
+   
+     <table width="100%" border="0" style="margin-top:20px;" cellspacing="0" cellpadding="7" class="tableBasic">
+      <tr>
+      <td colspan="7">
+      订单号：818815173653357758  
+      订单时间：2018-01-31 10:22:15 
+      订单状态：<b class="gray mr15">已完成</b>      </td>
+      </tr>
+      <tr>
+       <th width="50" >序号</th>
+       <th width="20%">商品名称</th>
+       <th width="20%">缩略图</th>
+       <th width="10%">价格</th>       
+       <th width="15%">数量</th>
+       <th width="15%">小计</th>
+       <th width="13%"> </th>
+      </tr>
+            <tr style="text-align:center;">
+        <td>1</td>
+        <td>人棉皱  棉感 薄 70522-20</td>
+        <td><img src="uploadfiles/image/20171031/b8fd94e5b561203a548cd8df9a255ebf.png" style="width:160px;height:120px;"/></td>
+        <td>￥10.00</td>
+        <td>5</td>
+        <td>￥50.00</td>
+        <td></td>
+      </tr>
+            <tr style="text-align:center;">
+        <td>2</td>
+        <td>现货	几何	 妈妈装  纬编 单面 60314-20</td>
+        <td><img src="/uploadfiles/image/20171031/9400701eb6805911bf97e09384649957.png" style="width:160px;height:120px;"/></td>
+        <td>￥34.00</td>
+        <td>11</td>
+        <td>￥374.00</td>
+        <td></td>
+      </tr>
+      
+      
+     </table>
+   
+     <table width="100%" border="0" style="margin-top:20px;" cellspacing="0" cellpadding="7" class="tableBasic">
+      <tr>
+      <td colspan="7">
+      订单号：818815139121911224  
+      订单时间：2017-12-22 11:09:51 
+      订单状态：<b class="gray mr15">已完成</b>      </td>
+      </tr>
+      <tr>
+       <th width="50" >序号</th>
+       <th width="20%">商品名称</th>
+       <th width="20%">缩略图</th>
+       <th width="10%">价格</th>       
+       <th width="15%">数量</th>
+       <th width="15%">小计</th>
+       <th width="13%"> </th>
+      </tr>
+            <tr style="text-align:center;">
+        <td>1</td>
+        <td>考拉</td>
+        <td><img src="/uploadfiles/image/20171212/20171212063756_33373.jpg" style="width:160px;height:120px;"/></td>
+        <td>￥100.00</td>
+        <td>1000</td>
+        <td>￥100,000.00</td>
+        <td></td>
+      </tr>
+            <tr style="text-align:center;">
+        <td>2</td>
+        <td>人棉	 棉感 70531-43</td>
+        <td><img src="/uploadfiles/image/20171031/4f6fb15117c9cd54ebc1c47a0a870977.png" style="width:160px;height:120px;"/></td>
+        <td>￥10.00</td>
+        <td>1</td>
+        <td>￥10.00</td>
+        <td></td>
+      </tr>
+      
+      
+     </table>
+   
+     <table width="100%" border="0" style="margin-top:20px;" cellspacing="0" cellpadding="7" class="tableBasic">
+      <tr>
+      <td colspan="7">
+      订单号：818815114910429716  
+      订单时间：2017-11-24 10:37:22 
+      订单状态：<b class="gray mr15">已完成</b>      </td>
+      </tr>
+      <tr>
+       <th width="50" >序号</th>
+       <th width="20%">商品名称</th>
+       <th width="20%">缩略图</th>
+       <th width="10%">价格</th>       
+       <th width="15%">数量</th>
+       <th width="15%">小计</th>
+       <th width="13%"> </th>
+      </tr>
+            <tr style="text-align:center;">
+        <td>1</td>
+        <td>现货	几何	 妈妈装  纬编 单面 60314-20</td>
+        <td><img src="/uploadfiles/image/20171031/9400701eb6805911bf97e09384649957.png" style="width:160px;height:120px;"/></td>
+        <td>￥34.00</td>
+        <td>5</td>
+        <td>￥170.00</td>
+        <td></td>
+      </tr>
+      
+      
+     </table>
+   
+     <table width="100%" border="0" style="margin-top:20px;" cellspacing="0" cellpadding="7" class="tableBasic">
+      <tr>
+      <td colspan="7">
+      订单号：818815114167664835  
+      订单时间：2017-11-23 13:59:26 
+      订单状态：<b class="blue mr15">已发货</b>      </td>
+      </tr>
+      <tr>
+       <th width="50" >序号</th>
+       <th width="20%">商品名称</th>
+       <th width="20%">缩略图</th>
+       <th width="10%">价格</th>       
+       <th width="15%">数量</th>
+       <th width="15%">小计</th>
+       <th width="13%"> </th>
+      </tr>
+            <tr style="text-align:center;">
+        <td>1</td>
+        <td>现货	几何	 妈妈装  纬编 单面 60314-20</td>
+        <td><img src="/uploadfiles/image/20171031/9400701eb6805911bf97e09384649957.png" style="width:160px;height:120px;"/></td>
+        <td>￥34.00</td>
+        <td>500</td>
+        <td>￥17,000.00</td>
+        <td></td>
+      </tr>
+            <tr style="text-align:center;">
+        <td>2</td>
+        <td>人棉皱  棉感 薄 70522-20</td>
+        <td><img src="/uploadfiles/image/20171031/b8fd94e5b561203a548cd8df9a255ebf.png" style="width:160px;height:120px;"/></td>
+        <td>￥10.00</td>
+        <td>600</td>
+        <td>￥6,000.00</td>
+        <td></td>
+      </tr>
+      
+      
+     </table>
+   
+     <table width="100%" border="0" style="margin-top:20px;" cellspacing="0" cellpadding="7" class="tableBasic">
+      <tr>
+      <td colspan="7">
+      订单号：818815114153784088  
+      订单时间：2017-11-23 13:36:18 
+      订单状态：<b class="gray mr15">已完成</b>      </td>
+      </tr>
+      <tr>
+       <th width="50" >序号</th>
+       <th width="20%">商品名称</th>
+       <th width="20%">缩略图</th>
+       <th width="10%">价格</th>       
+       <th width="15%">数量</th>
+       <th width="15%">小计</th>
+       <th width="13%"> </th>
+      </tr>
+            <tr style="text-align:center;">
+        <td>1</td>
+        <td>现货	几何	 妈妈装  纬编 单面 60314-20</td>
+        <td><img src="/uploadfiles/image/20171031/9400701eb6805911bf97e09384649957.png" style="width:160px;height:120px;"/></td>
+        <td>￥34.00</td>
+        <td>100</td>
+        <td>￥3,400.00</td>
+        <td></td>
+      </tr>
+            <tr style="text-align:center;">
+        <td>2</td>
+        <td>人棉皱  棉感 薄 70522-20</td>
+        <td><img src="/uploadfiles/image/20171031/b8fd94e5b561203a548cd8df9a255ebf.png" style="width:160px;height:120px;"/></td>
+        <td>￥10.00</td>
+        <td>200</td>
+        <td>￥2,000.00</td>
+        <td></td>
+      </tr>
+            <tr style="text-align:center;">
+        <td>3</td>
+        <td>人棉	民族风 70522-39</td>
+        <td><img src="/uploadfiles/image/20171031/9a8b5caf2c61f91fa1ccdcd8adea18a9.png" style="width:160px;height:120px;"/></td>
+        <td>￥12.00</td>
+        <td>300</td>
+        <td>￥3,600.00</td>
+        <td></td>
+      </tr>
+      
+      
+     </table>
+      </form>
+   </div>
+   <div class="page">
+    <ul><li><a href="?page=1" title="首页">&laquo;</a></li><li><a href="javascript:vido();">&lt;</a></li><li class="active"><a href="?page=1">1</a></li><li><a href="javascript:vido();">&gt;</a></li><li><a href="?page=1" title="尾页">&raquo;</a></li><li style="margin-left:20px;">共1页，转到 <SELECT style="margin-top:5px;" NAME="select" ONCHANGE="var jmpURL=this.options[this.selectedIndex].value ; if(jmpURL!='') {window.location=jmpURL;} else {this.selectedIndex=0 ;}" ><option value="?page=1"  selected="selected">1</option></SELECT></li></ul>   </div>
+  </div>  
+  </div>
+  </body>
+  </html>

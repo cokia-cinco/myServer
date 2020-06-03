@@ -1,0 +1,267 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>启航纺织网站管理系统</title>
+<link href="css/public.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/global.js"></script>
+<script type="text/javascript">
+$(function(){
+  
+  $("input[type='button']").click(function(){
+    var len = $("input.one[type='checkbox']:checked").length;
+    var action=$(this).attr('id');
+    if(len>0){
+      $('#form').attr("action","action.php?act="+action);
+      $('#form').submit();
+    }else{
+      alert("请选择需要操作的信息!");
+    }
+  });
+})
+</script>
+</head>
+<body>
+<div id="dcMain1"> 
+<div id="urHere">启航纺织 管理中心</div>  <div id="index" class="mainBox" style="padding-top:18px;height:auto!important;height:550px;min-height:550px;">
+   <h3><a href="addproduct.html" class="actionBtn">添加产品</a>
+   <a href="javascript:location.reload();" class="actionBtn" style="margin-right:10px;">刷新</a>产品管理</h3>  
+   
+   <div class="indexBox">
+    
+    <form name="" id="form" action="productlist.php" method="post">
+     <table width="100%" border="0" cellspacing="0" cellpadding="7" class="tableBasic">
+      <tr>
+       <th width="50" ><input type="checkbox" id="all">全选</th>
+       <th width="20%">产品名称</th>
+       <th width="10%">产品类型</th>
+       <th width="20%">缩略图</th>
+       <th width="15%">置顶</th>
+       <th width="15%">访问量</th>
+       <th width="13%">操作</th>
+      </tr>
+          
+      <tr>
+       <td align="center"> <input type="checkbox" name="id[]" class="one" value="10"/></td>
+       <td align="center"> 现货	几何	 妈妈装  纬编 单面 60314-20</td>
+       <td align="center"> 印花面料</td>
+       <td align="center"> <img src="uploadfiles/image/20171031/9400701eb6805911bf97e09384649957.png" style="width:160px;height:120px;"/></td>
+       <td align="center">  </td>
+       <td align="center"> 0</td>
+       <td align="center"> 
+
+       <a href="editproduct.php?id=10">编辑</a> |
+       <a href="javascript:if(confirm('是否删除该信息?'))location='action.php?act=delproduct&id=10';">删除</a> | 
+               <a href="action.php?act=istop&v=1&id=10">设置置顶</a>
+               </td>
+      
+      </tr>
+          
+      <tr>
+       <td align="center"> <input type="checkbox" name="id[]" class="one" value="9"/></td>
+       <td align="center"> 人棉	几何	印花 棉感 70522-47</td>
+       <td align="center"> 印花面料</td>
+       <td align="center"> <img src="uploadfiles/image/20171031/0d0dbc03768868fbd5af2d41a4a8af2d.png" style="width:160px;height:120px;"/></td>
+       <td align="center"> <img src="../images/mark1.png"/> </td>
+       <td align="center"> 0</td>
+       <td align="center"> 
+
+       <a href="editproduct.php?id=9">编辑</a> |
+       <a href="javascript:if(confirm('是否删除该信息?'))location='action.php?act=delproduct&id=9';">删除</a> | 
+               <a href="action.php?act=istop&v=0&id=9">取消置顶</a>
+               </td>
+      
+      </tr>
+          
+      <tr>
+       <td align="center"> <input type="checkbox" name="id[]" class="one" value="8"/></td>
+       <td align="center"> 人棉	几何	  70522-57</td>
+       <td align="center"> 印花面料</td>
+       <td align="center"> <img src="uploadfiles/image/20171031/af98b1947b516567061ca563181df679.png" style="width:160px;height:120px;"/></td>
+       <td align="center">  </td>
+       <td align="center"> 0</td>
+       <td align="center"> 
+
+       <a href="editproduct.php?id=8">编辑</a> |
+       <a href="javascript:if(confirm('是否删除该信息?'))location='action.php?act=delproduct&id=8';">删除</a> | 
+               <a href="action.php?act=istop&v=1&id=8">设置置顶</a>
+               </td>
+      
+      </tr>
+          
+      <tr>
+       <td align="center"> <input type="checkbox" name="id[]" class="one" value="7"/></td>
+       <td align="center"> 人棉	 棉感 70531-43</td>
+       <td align="center"> 印花面料</td>
+       <td align="center"> <img src="/uploadfiles/image/20171031/4f6fb15117c9cd54ebc1c47a0a870977.png" style="width:160px;height:120px;"/></td>
+       <td align="center">  </td>
+       <td align="center"> 0</td>
+       <td align="center"> 
+
+       <a href="editproduct.php?id=7">编辑</a> |
+       <a href="javascript:if(confirm('是否删除该信息?'))location='action.php?act=delproduct&id=7';">删除</a> | 
+               <a href="action.php?act=istop&v=1&id=7">设置置顶</a>
+               </td>
+      
+      </tr>
+          
+      <tr>
+       <td align="center"> <input type="checkbox" name="id[]" class="one" value="6"/></td>
+       <td align="center"> 人棉	民族风 70522-39</td>
+       <td align="center"> 印花面料</td>
+       <td align="center"> <img src="/uploadfiles/image/20171031/9a8b5caf2c61f91fa1ccdcd8adea18a9.png" style="width:160px;height:120px;"/></td>
+       <td align="center">  </td>
+       <td align="center"> 0</td>
+       <td align="center"> 
+
+       <a href="editproduct.php?id=6">编辑</a> |
+       <a href="javascript:if(confirm('是否删除该信息?'))location='action.php?act=delproduct&id=6';">删除</a> | 
+               <a href="action.php?act=istop&v=1&id=6">设置置顶</a>
+               </td>
+      
+      </tr>
+          
+      <tr>
+       <td align="center"> <input type="checkbox" name="id[]" class="one" value="5"/></td>
+       <td align="center"> 梭织  70305-16</td>
+       <td align="center"> 格子面料</td>
+       <td align="center"> <img src="/uploadfiles/image/20171031/af7a9f93db64f36873b7016efd851bfa.png" style="width:160px;height:120px;"/></td>
+       <td align="center">  </td>
+       <td align="center"> 300</td>
+       <td align="center"> 
+
+       <a href="editproduct.php?id=5">编辑</a> |
+       <a href="javascript:if(confirm('是否删除该信息?'))location='action.php?act=delproduct&id=5';">删除</a> | 
+               <a href="action.php?act=istop&v=1&id=5">设置置顶</a>
+               </td>
+      
+      </tr>
+          
+      <tr>
+       <td align="center"> <input type="checkbox" name="id[]" class="one" value="4"/></td>
+       <td align="center"> 梭织 衬衫 70305-3</td>
+       <td align="center"> 格子面料</td>
+       <td align="center"> <img src="uploadfiles/image/20171031/35de270a3eb09908cf33d703620071ab.png" style="width:160px;height:120px;"/></td>
+       <td align="center">  </td>
+       <td align="center"> 0</td>
+       <td align="center"> 
+
+       <a href="editproduct.php?id=4">编辑</a> |
+       <a href="javascript:if(confirm('是否删除该信息?'))location='action.php?act=delproduct&id=4';">删除</a> | 
+               <a href="action.php?act=istop&v=1&id=4">设置置顶</a>
+               </td>
+      
+      </tr>
+          
+      <tr>
+       <td align="center"> <input type="checkbox" name="id[]" class="one" value="3"/></td>
+       <td align="center"> 梭织  连衣裙 衬衫 70305-1</td>
+       <td align="center"> 格子面料</td>
+       <td align="center"> <img src="uploadfiles/image/20171031/0fd776653989f01c48b266ef268412b3.png" style="width:160px;height:120px;"/></td>
+       <td align="center"> <img src="../images/mark1.png"/> </td>
+       <td align="center"> 0</td>
+       <td align="center"> 
+
+       <a href="editproduct.php?id=3">编辑</a> |
+       <a href="javascript:if(confirm('是否删除该信息?'))location='action.php?act=delproduct&id=3';">删除</a> | 
+               <a href="action.php?act=istop&v=0&id=3">取消置顶</a>
+               </td>
+      
+      </tr>
+          
+      <tr>
+       <td align="center"> <input type="checkbox" name="id[]" class="one" value="2"/></td>
+       <td align="center"> 人棉皱  棉感 薄 70522-20</td>
+       <td align="center"> 印花面料</td>
+       <td align="center"> <img src="uploadfiles/image/20171031/b8fd94e5b561203a548cd8df9a255ebf.png" style="width:160px;height:120px;"/></td>
+       <td align="center">  </td>
+       <td align="center"> 0</td>
+       <td align="center"> 
+
+       <a href="editproduct.php?id=2">编辑</a> |
+       <a href="javascript:if(confirm('是否删除该信息?'))location='action.php?act=delproduct&id=2';">删除</a> | 
+               <a href="action.php?act=istop&v=1&id=2">设置置顶</a>
+               </td>
+      
+      </tr>
+          
+      <tr>
+       <td align="center"> <input type="checkbox" name="id[]" class="one" value="1"/></td>
+       <td align="center"> 字母	 绒感 60803-40</td>
+       <td align="center"> 印花面料</td>
+       <td align="center"> <img src="uploadfiles/image/20171031/f6dd95f902fb60491ace31888e09b60d.png" style="width:160px;height:120px;"/></td>
+       <td align="center"> <img src="../images/mark1.png"/> </td>
+       <td align="center"> 150</td>
+       <td align="center"> 
+
+       <a href="editproduct.php?id=1">编辑</a> |
+       <a href="javascript:if(confirm('是否删除该信息?'))location='action.php?act=delproduct&id=1';">删除</a> | 
+               <a href="action.php?act=istop&v=0&id=1">取消置顶</a>
+               </td>
+      
+      </tr>
+            <tr>
+        <td colspan="7">
+          <input type="button" value="批量删除" id="delproductall" class="btnc03 mr15"/>
+          批量转移动态信息：
+          <select name="cid">  
+                       
+            <option value="1">提花面料</option>         
+                       
+            <option value="2">印花面料</option>         
+                       
+            <option value="3">素色面料</option>         
+                       
+            <option value="4">格子面料</option>         
+                       
+            <option value="5">条子面料</option>         
+                       
+            <option value="6">绣花面料</option>         
+                       
+            <option value="7">麻料面料</option>         
+                       
+            <option value="8">毛纺面料</option>         
+                       
+            <option value="9">皮革面料</option>         
+                       
+            <option value="10">里布面料</option>         
+                      </select>
+          <input type="button" value="转移" id="moveproductall" class="btnf60 mr15"/>
+          批量复制：
+          <select name="cid2">  
+                       
+            <option value="1">提花面料</option>         
+                       
+            <option value="2">印花面料</option>         
+                       
+            <option value="3">素色面料</option>         
+                       
+            <option value="4">格子面料</option>         
+                       
+            <option value="5">条子面料</option>         
+                       
+            <option value="6">绣花面料</option>         
+                       
+            <option value="7">麻料面料</option>         
+                       
+            <option value="8">毛纺面料</option>         
+                       
+            <option value="9">皮革面料</option>         
+                       
+            <option value="10">里布面料</option>         
+                      </select>
+          <input type="button" value="复制" id="copyproductall" class="btn mr15"/>
+          <input type="text" name="kw" placeholder="请输入关键词……" class="inpFlie w300">
+          <input type="submit" value="搜索" id="searchproduct" class="btn9c6"/>
+        </td>
+      </tr>
+     </table>
+    </form>
+   </div>
+   <div class="page">
+    <ul><li><a href="?page=1" title="首页">&laquo;</a></li><li><a href="javascript:vido();">&lt;</a></li><li class="active"><a href="?page=1">1</a></li><li><a href="javascript:vido();">&gt;</a></li><li><a href="?page=1" title="尾页">&raquo;</a></li><li style="margin-left:20px;">共1页，转到 <SELECT style="margin-top:5px;" NAME="select" ONCHANGE="var jmpURL=this.options[this.selectedIndex].value ; if(jmpURL!='') {window.location=jmpURL;} else {this.selectedIndex=0 ;}" ><option value="?page=1"  selected="selected">1</option></SELECT></li></ul>   </div>
+  </div>  
+  </div>
+  </body>
+  </html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>启航纺织网站管理系统</title>
+<meta name="Copyright" content="Douco Design." />
+<link href="css/public.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/global.js"></script>
+<link rel="stylesheet" href="js/kindeditor/themes/default/default.css" />
+<link rel="stylesheet" href="js/kindeditor/plugins/code/prettify.css" />	
+    <script charset="utf-8" src="js/kindeditor/kindeditor-min.js"></script>
+    <script charset="utf-8" src="js/kindeditor/lang/zh_CN.js"></script>
+    <script charset="utf-8" src="js/kindeditor/plugins/code/prettify.js"></script>
+    <script>
+      var editor;
+      KindEditor.ready(function(K) {
+        editor = K.create('textarea[name="content"]', {
+          allowFileManager : true
+        });
+        K('#upimg').click(function() {
+          editor.loadPlugin('image', function() {
+            editor.plugin.imageDialog({
+              imageUrl : K('#image').val(),
+              clickFn : function(url, title, width, height, border, align) {
+                K('#image').val(url);
+                $('#imglist').html('<img src="'+url+'" style="width:298px;height:169px;"/>');
+                editor.hideDialog();
+              }
+            });
+          });
+        });
+      });
+    </script>
+</head>
+<body>
+<div id="dcMain1"> 
+<div id="urHere">启航纺织 管理中心</div>  <div id="index" class="mainBox" style="padding-top:18px;height:auto!important;height:550px;min-height:550px;">
+   <h3><a href="productlist.php" class="actionBtn">返回列表</a>产品管理 > 添加产品</h3>  
+   
+   <div class="indexBox">
+    
+    <form action="action.php?act=addproduct"  method="post">
+     <table width="100%" border="0" cellspacing="0" cellpadding="7" class="tableBasic">
+      <tr>
+       <td width="200" align="right">产品名称</td>
+       <td width="*">
+          <input type="text" name="name" id="name" class="inpFlie w500" />
+       </td>
+      </tr>
+      <tr>
+       <td width="200" align="right">产品类别</td>
+       <td width="*">
+          <select name="cid">  
+                       
+            <option value="1">提花面料</option>           
+            
+                       
+            <option value="2">印花面料</option>           
+            
+                       
+            <option value="3">素色面料</option>           
+            
+                       
+            <option value="4">格子面料</option>           
+            
+                       
+            <option value="5">条子面料</option>           
+            
+                       
+            <option value="6">绣花面料</option>           
+            
+                       
+            <option value="7">麻料面料</option>           
+            
+                       
+            <option value="8">毛纺面料</option>           
+            
+                       
+            <option value="9">皮革面料</option>           
+            
+                       
+            <option value="10">里布面料</option>           
+            
+                      </select>
+       </td>
+      </tr>
+      <tr>
+       <td width="200" align="right">价格</td>
+       <td width="*">
+          <input type="text" name="price" id="price" class="inpFlie w500" />
+       </td>
+      </tr>
+      <tr>
+       <td width="200" align="right">缩略图</td>
+       <td width="*">
+          <img src="images/upimg.jpg" id="upimg" style="border:1px #999 dashed;cursor:pointer;"/>
+          <span id="imglist"></span>
+          <input type="hidden" id="image" name="image" />
+       </td>
+      </tr>
+      <tr>
+       <td width="200" align="right">成分</td>
+       <td width="*">
+          <input type="text" name="chengfen" id="chengfen" class="inpFlie w500" />
+       </td>
+      </tr>
+      <tr>
+       <td width="200" align="right">密度</td>
+       <td width="*">
+          <input type="text" name="midu" id="midu" class="inpFlie w500" />
+       </td>
+      </tr>
+      <tr>
+       <td width="200" align="right">门幅</td>
+       <td width="*">
+          <input type="text" name="menfu" id="menfu" class="inpFlie w500" />
+       </td>
+      </tr>
+      <tr>
+       <td width="200" align="right">置顶</td>
+       <td width="*">
+          <input type="checkbox" name="istop" id="istop" value="1"/>
+       </td>
+      </tr>
+      <tr>
+       <td width="200" align="right">动态详情</td>
+       <td width="*">
+          <textarea name="content" id="content" style="width:90%;height:500px;"></textarea>
+       </td>
+      </tr>
+      
+      <tr>
+       <td width="200"></td>
+       <td width="*">
+          <input type="submit" name="submit" id="submit" class="btn" value="提交" />
+       </td>
+      </tr>
+      
+     </table>
+     </form>
+    
+   </div>
+   
+  </div>  
+  </div>
+  </body>
+  </html>

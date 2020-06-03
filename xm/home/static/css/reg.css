@@ -1,0 +1,170 @@
+.wrap{
+    width: 854px;
+    height: 548px;
+    background-color: #fff;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -279px;
+    margin-left: -427px;
+}
+
+.reg-frame{
+    padding-top: 0;
+    padding-left: 34px;
+    padding-right: 34px;
+    padding-bottom: 30px;
+    width: 786px;
+    height: 518px;
+    position: relative;
+}
+
+.external_logo_area{
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 40px;
+}
+
+.title-item{
+    margin-top: -30px;
+   
+}
+
+.regbox{
+    width: 332px;
+    height: 246px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-right: auto;
+    margin-left: auto;
+/*     background-color: red; */
+}
+
+.phone_step1{
+    width: 332px;
+    height: 246px;
+    /* background-color: green; */
+    position: relative;
+}
+
+.tit_normal{
+    color: #333;
+    font-weight: normal;
+    padding-bottom: 5px;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: left;
+}
+
+.listwrap{
+    padding-bottom: 15px;
+    position: relative;
+    line-height: 20px;
+    color: #666;
+    font-size: 14px;
+    width: 332px;
+    height: 42px;
+    /* background-color: blue; */
+}
+
+.listtit{
+    /* background-color: pink; */
+    width: 332px;
+    height: 42px;
+}
+
+.display_box{
+    width: 316px;
+    height: 40px;
+    padding-left: 14px;
+    line-height: 40px;
+    display: inline-block;
+    border: 1px solid #e8e8e8;
+    cursor: pointer;
+    color: #555;
+    /* background-color: orange; */
+}
+
+.region_tip_text{
+    width: 332px;
+    height: 20px;
+    margin-bottom: 10px;
+    margin-top: -10px;
+    line-height: 20px;
+    color: #666;
+    font-size: 14px;
+    text-align: left;
+}
+
+.listwrap_inside_panel{
+    width: 332px;
+    height: 42px;
+    /* background-color: gray; */
+}
+
+.listwrap1{
+    width: 74px;
+    height: 40px;
+    margin-bottom: 10px;
+    /* background-color: red; */
+    float: left;
+    border: 1px solid #ebebeb;
+}
+
+.listwrap1 select{
+    outline: none;
+   
+}
+
+.inputbg{
+    border: 1px solid #ebebeb;
+    height: 40px;
+    width: 255px;
+    margin-bottom: 10px;
+    float: left;
+    margin-left: -1px;
+    /* background-color: black; */
+
+}
+
+
+
+.inputbg_tit{
+    border: none;
+    width: 94%;
+    height: 100%;
+    padding-left: 15px;
+}
+
+.fixed_bot{
+    width: 332px;
+    height: 42px;
+    position: absolute;
+    bottom: -130px;
+    left: 0;
+}
+
+.fixed_bot input{
+    width:332px;
+    height:42px;
+    line-height: 42px;
+    border:none;
+    color: #fff;
+    background-color: #ff6700;
+    font-size: 14px;
+    outline: none;
+}
+
+.privacy_box{
+    width: 332px;
+    font-size: 14px;
+    color: #9d9d9d;
+    position: absolute;
+    left: 261px;
+    bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+

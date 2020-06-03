@@ -1,0 +1,1036 @@
+.wraps {
+    width: 1264px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.mSer_nav {
+	width:100%;
+	overflow:hidden;
+	height:60px;
+	line-height:60px;
+	border-top:1px solid rgba(230,230,230,1);
+}
+.mSer_n .mSer_n1 h1 {
+	font-size:18px;
+	font-weight:400;
+	color:rgba(51,51,51,1);
+
+}
+.mSer_n2 {
+	overflow:hidden;
+}
+.mSer_n2 li {
+	float:left;
+	font-size:18px;
+	font-weight:400;
+	color:rgba(51,51,51,1);
+	height:60px;
+	margin-left:30px;
+	padding: 0 1px;
+}
+.mSer_n2 li.active {
+	color:rgba(24,144,255,1);
+	border-bottom:3px solid rgba(24,144,255,1);
+}
+.banner {
+	width:100%;
+	height: 460px;
+    background-position: center 0;
+    background-repeat: no-repeat;
+    background-image:url(../../image/home/serIntroduction/1banner.jpg);
+}
+.selfSer_b {
+	padding-top:82px;
+}
+.selfSer1_bs {
+	margin-top:10px;
+	cursor:pointer;
+}
+.mSer1 {
+	width:100%;
+	background-color:rgba(255,255,255,1);
+	overflow:hidden;
+	padding:88px 0 104px 0;
+	margin:0 auto;
+	text-align:left;
+}
+.mSer_t {
+    position: relative;
+}
+.mSer_tl {
+    width: 558px;
+    text-align: justify;
+}
+.mSer_tl .h2 {
+	color:rgba(51,51,51,1);
+	line-height:45px;
+	font-size: 30px;
+	font-family:Microsoft YaHei;
+}
+.mSer_tl .mSer_tl_title .p1 {
+	width:36px;
+	height:3px;
+	background:rgba(23,144,251,1);
+	margin: 25px 0;
+
+}
+.mSer_tl .div_txt h2,
+.mSer_tl .div_txt {
+	color:rgba(119,119,119,1);
+    line-height: 30px;
+
+    font-size: 18px;
+}
+.mSer_tl .div_txt h2 {
+	display: inline-block;
+}
+.mSer_tr {
+	width:701px;
+    position: absolute;
+    right: -70px;
+}
+.mSer_tr img {
+	width:100%;
+}
+.mSer_tr .mSer_pos {
+	position: relative;
+}
+.mSer_tr .mSer_txt {
+	position: absolute;
+	color: #fff;
+	font-size: 16px;
+}
+.mSer_tr .txt1 {
+	    bottom: 265px;
+    left: 33px;
+}
+.mSer_tr .txt2 {
+	    top: 81px;
+    left: 125px;
+}
+.mSer_tr .txt3 {
+	top: 81px;
+    right: 125px;
+}
+.mSer_tr .txt4 {
+	    top: 182px;
+    right: 26px;
+}
+.mSer_tr .txt5 {
+	    bottom: 125px;
+    right: 25px;
+}
+.mSer_tr .txt6 {
+	    bottom: 20px;
+    right: 132px;
+}
+.mSer_tr .txt7 {
+	    bottom: 20px;
+    left: 128px;
+}
+.mSer_tr .txt8 {
+	    bottom: 122px;
+    left: 26px;
+}
+.mSer_tl_d {
+	width:100%;
+	overflow:hidden;
+}
+.mSer_tl_d .mSer_tl_btn {
+	display:inline-block;
+
+	height:41px;
+	line-height:41px;
+	background:rgba(24,144,255,1);
+	border-radius:21px;
+	text-align:center;
+	font-size:18px;
+	color:rgba(254,254,254,1);
+	margin:46px 0 43px 0;
+	padding: 0 38px;
+}
+.mSer_tul {
+	overflow:hidden;
+}
+.mSer_tul li {
+	height:84px;
+	text-align:center;
+	font-weight:300;
+    margin-right: 27px;
+    padding-right: 27px;
+}
+
+.mSer_tul li .mSer_tlid {
+	width:57px;
+	height:57px;
+    margin: 0 auto;
+}
+.mSer_tul li > p {
+	font-size:18px;
+	font-weight:400;
+	color:rgba(51,51,51,1);
+	line-height:30px;
+}
+.mSer2 {
+    width:100%;
+    height: 784px;
+
+    background:rgba(245,245,245,1);
+    background:url(../../image/home/serIntroduction/3bottombg1.png) no-repeat center 0;
+    background-size: 100% 100%;
+    overflow:hidden;
+    margin:0 auto;
+    text-align:center;
+}
+.mSer2_top .h2 {
+	font-size:30px;
+	font-weight:400;
+	color:rgba(51,51,51,1);
+	line-height:70px;
+	margin-top: 85px;
+	font-family:Microsoft YaHei;
+}
+.mSer2_top .p1 {
+	width:56px;
+	height:3px;
+	background:rgba(23,144,251,1);
+	display:inline-block;
+}
+.mSer2_main {
+	overflow:hidden;
+	margin-top: 42px;
+}
+.mSer2_main li {
+	float:left;
+	width:379px;
+	height:355px;
+	background:rgba(255,255,255,1);
+	box-shadow:0px 4px 8px 0px rgba(214,214,214,0.4);
+	border-radius:5px;
+	margin-right: 22px;
+	position: relative;
+}
+.mSer2_main li:last-child {
+	margin-right: 0;
+}
+.mSer2_main li .mSer2_main_b .h2 {
+	font-size:24px;
+	font-weight:400;
+	color:rgba(51,51,51,1);
+	line-height:70px;
+}
+.mSer2_main li .mSer2_main_b p {
+	font-size:16px;
+	font-weight:400;
+	color:#999999;
+	line-height:30px;
+	    padding: 0 8px;
+}
+.mSer2_main li .mSer2_main_b p > span {
+	font-size:20px;
+	font-weight:400;
+	color:#FF7500;
+	line-height:30px;
+}
+.mSer2_main li .mSer2_main_b a {
+	display: block;
+	width:222px;
+	height:49px;
+	line-height: 49px;
+	background:rgba(23,144,251,1);
+	border-radius:25px;
+	font-size:18px;
+	font-weight:400;
+	color:rgba(255,255,255,1);
+	margin: 0 auto;
+    position: absolute;
+    bottom: 25px;
+    text-align: center;
+    left: 0;
+    right: 0;
+}
+.mSer2_bt {
+	font-size:14px;
+	font-weight:400;
+	color:rgba(153,153,153,1);
+	line-height:30px;
+	text-align: left;
+	margin-top: 29px;
+}
+.mSer3 {
+	width:100%;
+	height: 700px;
+	background:rgba(245,245,245,1);
+	background:url(../../image/home/serIntroduction/4bottombg2.jpg) no-repeat center 0;
+    background-size: 100% 100%;
+	overflow:hidden;
+	margin:0 auto;
+	text-align:center;
+	padding-top: 90px;
+}
+.mSer3_left {
+	float:left;
+	position: relative;
+	margin-top: 50px;
+    margin-left: 27px;
+}
+.mSer3_left_main {
+	position: absolute;
+	text-align: left;
+    margin-top: 57px;
+    top: 10px;
+    left: -23px;
+
+}
+.mSer3_left_main .p1 {
+	font-size:30px;
+	font-weight:400;
+	color:rgba(255,255,255,1);
+	line-height:60px;
+}
+.mSer3_left_main .p2 {
+	font-size:48px;
+	font-weight:400;
+	color:rgba(255,255,255,1);
+	line-height:60px;
+}
+.mSer3_left_main .p3 {
+	width:15px;
+	height:4px;
+	background:rgba(255,255,255,1);
+	display: inline-block;
+    margin-left: 4px;
+}
+.mSer3_left_main .p4 {
+	font-size:24px;
+	font-weight:400;
+	color:rgba(255,255,255,1);
+	line-height:60px;
+}
+.mSer3_right {
+	float: left;
+    margin-left: 40px;
+    overflow: hidden;
+    width: 894px;
+
+}
+.mSer3_right ul {
+	overflow: hidden;
+	margin-bottom: 23px;
+}
+.mSer3_right li {
+	width:220px;
+	height:217px;
+
+	float: left;
+	margin-right: 3px;
+	position: relative;
+	margin-top: 3px;
+	overflow: hidden;
+}
+.mSer3_right li:nth-child(4n) {
+	margin-right: 0;
+}
+.mSer3_right li > p {
+	position: absolute;
+	text-align: center;
+	right: 0;
+	left: 0;
+	font-size:20px;
+	font-weight:400;
+	color:rgba(51,51,51,1);
+	line-height:30px;
+	    bottom: 8px;
+}
+.mSer3_more {
+	text-align: center;
+	font-size:20px;
+	font-weight:400;
+	color:rgba(255,255,255,1);
+	line-height:30px;
+	margin-top: 23px;
+}
+.mSer4 {
+	width:100%;
+	height: 860px;
+	background:url(../../image/home/serIntroduction/5bottombg3.jpg) no-repeat center 0;
+	overflow:hidden;
+	margin:0 auto;
+	text-align:center;
+	padding-top: 60px;
+}
+.mSer4 .h2 {
+	font-size:30px;
+	font-weight:400;
+	color:rgba(51,51,51,1);
+	line-height:45px;
+	font-family:Microsoft YaHei;
+}
+.mSer4 .p1 {
+	width:56px;
+	height:3px;
+	background:rgba(23,144,251,1);
+	display: inline-block;
+    margin-bottom: 40px;
+    margin-top: 20px;
+}
+.mSer4 .mSer4_txt {
+	position: relative;
+}
+.mSer4 .mSer4_txt .mSet4_tips {
+	position: absolute;
+	font-family:Microsoft YaHei;
+}
+.mSer4 .mSer4_txt .tips1 {
+    bottom: -5px;
+    left: 4px;
+}
+.mSer4 .mSer4_txt .tips2 {
+        top: 258px;
+    left: 95px;
+}
+.mSer4 .mSer4_txt .tips3 {
+        top: 167px;
+    left: 277px;
+}
+.mSer4 .mSer4_txt .tips4 {
+        top: 123px;
+    left: 445px;
+}
+.mSer4 .mSer4_txt .tips5 {
+        top: 123px;
+    left: 617px;
+}
+.mSer4 .mSer4_txt .tips6 {
+       top: 167px;
+    right: 249px;
+}
+.mSer4 .mSer4_txt .tips7 {
+        top: 258px;
+    right: 106px;
+}
+.mSer4 .mSer4_txt .tips8 {
+    bottom: -5px;
+        right: 26px;
+}
+.mSer4 .mSer4_txt .mSet4_tips .pt1 {
+    font-size: 24px;
+    color: #ff7500;
+    line-height: 30px;
+    margin-bottom: 7px;
+}
+.mSer4 .mSer4_txt .mSet4_tips .pt2 {
+	font-size: 16px;
+	color: #333;
+}
+.mSer5 {
+	width:100%;
+	height:1200px;
+	background:rgba(250,250,250,1);
+	margin: 0 auto;
+	padding-top: 94px
+}
+.mSer5_t_o {
+	width:1190px;
+	height:480px;
+	background:rgba(255,255,255,1);
+	box-shadow:0px 6px 12px 0px rgba(135,135,135,0.2);
+	border-radius:10px;
+    float: left;
+}
+.mSer5_t_oLeft {
+	float: left;
+}
+.mSer5_t_oRight {
+	float: left;
+    position: relative;
+    margin-left: 52px;
+    width: 541px;
+    text-align: left;
+    padding-right: 20px;
+}
+.mSer5_t_oRight .h2 {
+	color:rgba(51,51,51,1);
+	line-height:45px;
+	margin-top: 60px;
+	font-size:30px;
+	font-family:Microsoft YaHei;
+}
+.mSer5_t_oRight .p1 {
+	display: inline-block;
+	width:36px;
+	height:3px;
+	background:rgba(23,144,251,1);
+	margin: 25px 0;
+}
+.mSer5_t_oRight .p2 {
+	color:rgba(153,153,153,1);
+    line-height: 30px;
+    margin-top: 5px;
+    font-size:18px;
+}
+
+.mSer5_t_oRight .mSer_tl_d {
+	width:100%;
+	overflow:hidden;
+}
+.mSer5_t_oRight .mSer_tl_d .mSer_btn {
+	display: block;
+	font-size:18px;
+	font-weight:400;
+	color:rgba(23,144,251,1);
+	margin-top: 26px;
+	margin-bottom: 40px;
+}
+.mSer5_t_oRight .mSer_tul {
+	overflow:hidden;
+}
+.mSer5_t_oRight .mSer_tul li {
+	border-right:1px solid rgba(217,217,215,1);
+	height:84px;
+	text-align:center;
+	font-weight:300;
+    margin-right: 27px;
+    padding-right: 27px;
+}
+.mSer5_t_oRight .mSer_tul li:last-child {
+	border-right:none;
+}
+.mSer5_t_oRight .mSer_tul li .mSer_tlid {
+	width:55px;
+	height:55px;
+}
+.mSer5_t_oRight .mSer_tul li > p {
+	color:rgba(136,136,136,1);
+	line-height:1;
+	font-size:14px;
+    margin-top: 8px;
+}
+.mSer6 {
+	width:100%;
+	height: 989px;
+	background-color:rgba(250,250,250,1);
+	overflow:hidden;
+	margin:0 auto;
+	text-align:center;
+
+}
+.mSer6_img {
+	width:100%;
+	height: 650px;
+	background-color:rgba(250,250,250,1);
+	background:url(../../image/home/serIntroduction/7bottombg4.jpg) no-repeat center 0;
+    background-size: 100% 100%;
+	margin:0 auto;
+	text-align:center;
+	position: relative;
+}
+.mSer6_t {
+	width:1190px;
+	height:759px;
+	background:rgba(255,255,255,1);
+	box-shadow:0px 6px 35px 0px rgba(135,135,135,0.1);
+	border-radius:10px;
+	position: absolute;
+	text-align: center;
+	left: 0;
+	right: 0;
+    top: 90px;
+}
+.mSer6_t_ul {
+	float: left;
+	margin-top: 30px;
+	overflow: hidden;
+}
+.mSer6_t_ul li {
+	float: left;
+	padding: 0 72px;
+	/* border-right: 1px solid rgba(236,236,236,1); */
+	position: relative;
+}
+.mSer6_t_ul li:last-child {
+	border-right: none;
+}
+.mSer6_t_ul li .mSer6_t_ul_pos {
+	position: absolute;
+	right: 0;
+	width:1px;
+	height:46px;
+	background:rgba(236,236,236,1);
+	    top: 22px;
+}
+.mSer6_t_ul li .p1 {
+	font-size:48px;
+	font-weight:400;
+	color:rgba(51,51,51,1);
+    line-height: 70px;
+    position: relative;
+}
+.mSer6_t_ul li .p1 sup {
+    position: absolute;
+    font-size: 24px;
+    top: -14px;
+}
+.mSer6_t_ul li .p2 {
+	font-size:16px;
+	font-weight:400;
+	color:rgba(153,153,153,1);
+	line-height:17px;
+}
+.mSer6_t_center {
+	width:100%;
+	height: 492px;
+	background-color:rgba(250,250,250,1);
+	background:url(../../image/home/serIntroduction/7tupian_shuju.png) no-repeat center 0;
+
+	text-align:center;
+	position: relative;
+	margin-top: 155px;
+	padding-top: 37px;
+}
+.mSer6_t_center p {
+
+	font-size:18px;
+	font-weight:400;
+	color:rgba(254,255,255,1);
+	line-height:30px;
+}
+.mSer6_t .mSer_btn {
+	display: block;
+	width:319px;
+	height:49px;
+	line-height: 49px;
+	background:rgba(23,144,251,1);
+	border-radius:25px;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 30px;
+    font-size:18px;
+	font-weight:400;
+	color:rgba(255,255,255,1);
+}
+.mSer7 {
+	width:100%;
+    height: 730px;
+	background-color:rgba(250,250,250,1);
+	background:url(../../image/home/serIntroduction/8bottombg5.jpg) no-repeat center 0;
+    background-size: 100% 100%;
+	margin:0 auto;
+	text-align:left;
+	position: relative;
+}
+.mSer7_t_top .h2 {
+	font-family:Microsoft YaHei;
+	font-size:30px;
+	font-weight:400;
+	color:rgba(51,51,51,1);
+	line-height:90px;
+}
+.mSer7_t_top .p1 {
+	width:36px;
+	height:3px;
+	background:rgba(81,215,216,1);
+	display: inline-block;
+}
+.mSer7_t_top .p2 {
+	font-size:18px;
+	font-weight:400;
+	color:rgba(153,153,153,1);
+	line-height:30px;
+	margin-top: 23px;
+	margin-bottom: 41px;
+}
+.mSer7_t_top .mSer_btn {
+	display: block;
+	width:222px;
+	height:49px;
+	line-height: 49px;
+	background:rgba(81,215,216,1);
+	border-radius:25px;
+	font-size:18px;
+	font-weight:400;
+	color:rgba(255,255,255,1);
+	text-align: center;
+
+}
+.mSer7_t_bottom {
+	overflow:hidden;
+	position: relative;
+	text-align: center;
+    bottom: -145px;
+}
+.mSer7_t_bottom li {
+	float: left;
+	padding: 0 44px;
+
+}
+.mSer7_t_bottom li:first-child {
+	padding-left: 0;
+	border-right: 1px solid rgba(255,255,255,1);
+}
+.mSer7_t_bottom li .p1 {
+	font-size:66px;
+	font-weight:400;
+	color:rgba(255,255,255,1);
+	line-height:66px;
+}
+.mSer7_t_bottom li .p1 span {
+	font-size: 33px;
+	position: relative;
+	top: -30px;
+}
+.mSer7_t_bottom li .p2 {
+	font-size:18px;
+	font-weight:400;
+	color:rgba(255,255,255,1);
+	line-height:17px;
+}
+.mSer8 {
+	height: 726px;
+	width: 100%;
+	text-align: center;
+	margin: 0 auto;
+}
+.mSer8_t .h2 {
+	margin-top: 122px;
+	margin-bottom: 14px;
+}
+.mSer8_t .h2 h2,
+.mSer8_t .h2 {
+	font-family:Microsoft YaHei;
+	font-size:30px;
+	font-weight:400;
+	color:rgba(51,51,51,1);
+	line-height:30px;
+
+}
+.mSer8_t .h2 h2 {
+	display: inline-block;
+}
+.mSer8_t  .p1 {
+	width:56px;
+	height:3px;
+	background:rgba(23,144,251,1);
+	display: inline-block;
+	margin-bottom: 41px;
+}
+.mSer8_t_ul {
+	overflow: hidden;
+
+}
+.mSer8_t_ul .mSer8_t_box {
+	width:239px;
+	height:176px;
+	border:1px solid rgba(238,238,238,1);
+	border-radius:5px;
+	text-align: left;
+	padding-left: 27px;
+	padding-top: 33px;
+	padding-right: 20px;
+	float: left;
+}
+.mSer8_t_ul .mSer8_t_box .h1 {
+	font-size:55px;
+	font-weight:bold;
+	color:rgba(51,51,51,1);
+	line-height:55px;
+}
+.mSer8_t_ul .mSer8_t_box .p2 {
+	font-size:20px;
+	font-weight:bold;
+	color:rgba(51,51,51,1);
+	line-height:35px;
+}
+.mSer8_t_ul .mSer8_t_box  .h1s,
+.mSer8_t_ul .mSer8_t_box .p3 {
+	font-size:14px;
+	font-weight:400;
+	color:rgba(153,153,153,1);
+	line-height:18px;
+	display: inline-block;
+}
+.mSer8_t_ul .mSer8_t_box .p3 > a {
+	color:#1790FB;
+}
+.mSer8_t_ul .mSer8_t_img {
+    width: 240px;
+    height: 176px;
+    line-height: 176px;
+    float: left;
+    margin: 0 auto;
+}
+.mSer8_t_ul .mSer8_t_img1 img,
+.mSer8_t_ul .mSer8_t_img img {
+	vertical-align: middle
+}
+.mSer8_t_ul .mSer8_t_img1 {
+	width: 239px;
+    height: 76px;
+    float: right;
+    line-height: 76px;
+}
+.mSer8_t .mSer_btn {
+	display: block;
+	text-align: center;
+	margin: 0 auto;
+	margin-top: 69px;
+	width:319px;
+	height:49px;
+	background:rgba(23,144,251,1);
+	border-radius:25px;
+	font-size:18px;
+	font-weight:400;
+	color:rgba(255,255,255,1);
+	line-height:49px;
+}
+.mSer9 {
+	width: 100%;
+	height: 670px;
+	overflow: hidden;
+}
+.mSer9 .mSer9_left {
+	width: 50%;
+	background:rgba(36,160,220,1);
+	float: left;
+	height: 670px;
+}
+.mSer9_left_box {
+	float: right;
+	margin-right: 40px;
+	width: 540px;
+}
+.mSer9_left_box .mSer9_left_box_title {
+	font-family:Microsoft YaHei;
+	font-size:30px;
+	font-weight:400;
+	color:rgba(255,255,255,1);
+	line-height:30px;
+	border-left: 2px solid rgba(255,255,255,1);
+	margin-top: 71px;
+	text-align: left;
+	width: 100%;
+	    margin-left: 12px;
+    margin-bottom: 20px;
+
+}
+.mSer9_left_box .mSer9_left_box_title span {
+	margin-left: 10px;
+}
+.mSer9 .mSer9_right {
+	width: 50%;
+	background:rgba(81,215,216,1);
+	float: left;
+	height: 670px;
+}
+.mSer9_left_box .p1 {
+	font-size:24px;
+	font-weight:400;
+	color:rgba(255,255,255,1);
+	line-height:24px;
+	margin-top: 15px;
+}
+.mSer9_left_box .p2 {
+	font-size:18px;
+	font-weight:400;
+	color:rgba(255,255,255,1);
+	line-height:18px;
+	margin-top: 19px;
+	margin-bottom: 30px;
+}
+.mSer9_left_box .p3 {
+	font-size:16px;
+	font-weight:400;
+	color:rgba(255,255,255,1);
+	line-height:24px;
+}
+.mSer9_right .mSer9_left_box {
+	float: left;
+	    margin-left: 40px;
+}
+.mSer9_right .mSer9_left_box img {
+	margin-top: 121px;
+}
+.mSer9_left_box .p1,
+.mSer9_left_box .p2,
+.mSer9_left_box .p3 {
+	margin-left: 20px;
+}
+.mSer10 {
+	width:100%;
+	height:733px;
+	background:rgba(250,250,250,1);
+	overflow: hidden;
+	text-align: left;
+	margin: 0 auto;
+}
+.mSer10_t .mSer10_left {
+	float: left;
+	width: 500px;
+}
+.mSer10_t .mSer10_left .h2 {
+	font-family:Microsoft YaHei;
+	font-size:30px;
+	font-weight:400;
+	color:rgba(51,51,51,1);
+	line-height:30px;
+	margin-top: 131px;
+}
+.mSer10_t .mSer10_left .p1 {
+	display: inline-block;
+	width:36px;
+	height:3px;
+	background:rgba(23,144,251,1);
+	margin-top: 26px;
+	margin-bottom: 40px;
+}
+.mSer10_t .mSer10_left .p2 {
+	font-size:18px;
+	font-weight:400;
+	color:rgba(51,51,51,1);
+	line-height:25px;
+	margin-bottom: 50px;
+	width: 100%;
+	overflow: hidden;
+}
+.mSer10_t .mSer10_left .p2 img {
+	margin-right: 5px;
+	    position: relative;
+    top: 4px;
+    float: left;
+}
+.mSer10_t .mSer10_left .p2 span {
+	float:left;
+	display:block;
+}
+.mSer10_t .mSer10_left .mSer_btn {
+	display: block;
+
+	text-align: center;
+	width:319px;
+	height:49px;
+	line-height:49px;
+	background:rgba(23,144,251,1);
+	border-radius:25px;
+	font-size:18px;
+	font-weight:400;
+	color:rgba(255,255,255,1);
+}
+.mSer10_right {
+	float: left;
+	margin-left: 51px;
+	margin-top: 20px;
+}
+.mSer11 {
+	width:100%;
+	height: 601px;
+	background-color:rgba(250,250,250,1);
+	background:url(../../image/home/serIntroduction/11bottombg5.jpg) no-repeat center 0;
+    background-size: 100% 100%;
+	margin:0 auto;
+	text-align:center;
+	position: relative;
+}
+.mSer11_t {
+	overflow: hidden;
+}
+.mSer11_t .h2 {
+	font-family:Alibaba PuHuiTi;
+	font-size:48px;
+	font-weight:500;
+	color:rgba(255,255,255,1);
+	line-height:48px;
+	margin-top:177px;
+	margin-bottom: 19px;
+}
+.mSer11_t .p1 {
+	font-size:20px;
+	font-family:Alibaba PuHuiTi;
+	font-weight:400;
+	color:rgba(255,255,255,1);
+	line-height:20px;
+	margin-bottom: 29px;
+}
+.mSer11_t .mSer_btn {
+	font-family:Alibaba PuHuiTi;
+	display:block;
+	text-align: center;
+	margin: 0 auto;
+	width:490px;
+	height:80px;
+	background:rgba(255,255,255,1);
+	border-radius:5px;
+	font-size:36px;
+	font-weight:400;
+	color:rgba(49,133,246,1);
+	line-height:80px;
+}
+.mSer11_t .p2 {
+	font-size:30px;
+	font-weight:400;
+	color:rgba(255,255,255,1);
+	line-height:30px;
+	margin-top:24px;
+	font-family: AlibabaPuHuiTiR;
+}
+.mSer11_t .p2 span {
+	font-weight:bold;
+	font-family: AlibabaPuHuiTiB;
+}
+.mSer12 {
+	width:100%;
+	height: 609px;
+	background-color:rgba(250,250,250,1);
+	background:url(../image/serIntroduction/12tupian_qkl.jpg) no-repeat center 0;
+	margin:0 auto;
+	text-align:center;
+	position: relative;
+}
+.mSer12_t {
+	overflow: hidden;
+}
+.mSer12_t .h2 {
+	font-family:Microsoft YaHei;
+	font-size:36px;
+	font-weight:400;
+	color:rgba(255,255,255,1);
+	line-height:36px;
+	margin-top: 90px;
+}
+.mSer12_t .p1 {
+	font-family:Microsoft YaHei;
+	font-size:24px;
+	font-weight:400;
+	color:rgba(255,255,255,1);
+	line-height:26px;
+	margin-top: 20px;
+	margin-bottom: 30px;
+}
+.mSer12_t .p2 {
+	display: inline-block;
+	width:37px;
+	height:3px;
+	background:rgba(255,255,255,1);
+	margin-bottom: 18px;
+}
+.mSer12_t .p3 {
+	font-size:16px;
+	font-weight:400;
+	color:rgba(255,255,255,1);
+	line-height:30px;
+	font-family:Microsoft YaHei;
+
+}
+.mSer12_t  .mSer_btn {
+	font-family:Microsoft YaHei;
+	display: block;
+	margin: 0 auto;
+	width:182px;
+	height:49px;
+	border:1px solid rgba(255,255,255,1);
+	border-radius:25px;
+	font-size:20px;
+	font-weight:400;
+	color:rgba(255,255,255,1);
+	line-height:49px;
+	margin-top:35px;
+}

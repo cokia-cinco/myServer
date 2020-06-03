@@ -1,0 +1,104 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>启航纺织网站管理系统</title>
+<meta name="Copyright" content="Douco Design." />
+<link href="<?=ADMIN_CSS?>public.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="<?=ADMIN_JS?>jquery.min.js"></script>
+<script type="text/javascript" src="<?=ADMIN_JS?>global.js"></script>
+</head>
+<body>
+<div id="dcMain1"> 
+<div id="urHere">启航纺织 管理中心</div>  <div id="index" class="mainBox" style="padding-top:18px;height:auto!important;height:550px;min-height:550px;">
+     
+   <div id="douApi"></div>
+      <div class="indexBox">
+    <div class="boxTitle">单页面快速管理</div>
+    <ul class="ipage">
+          
+     <a href="page.php?rec=edit&id=1" class="child1">公司概况</a> 
+      
+     <a href="page.php?rec=edit&id=2" class="child1">企业荣誉</a> 
+      
+     <a href="page.php?rec=edit&id=3" class="child1">发展历程</a> 
+      
+     <a href="page.php?rec=edit&id=4" class="child1">联系我们</a> 
+      
+     <a href="page.php?rec=edit&id=5" class="child1">人才招聘</a> 
+
+     <a href="page.php?rec=edit&id=6" class="child1">营销网络</a> 
+     <div class="clear"></div>
+    </ul>
+   </div>
+  
+   <div class="indexBox">
+    <div class="boxTitle">服务器信息</div>
+    <ul>
+     <table width="100%" border="0" cellspacing="0" cellpadding="7" class="tableBasic">
+      <tr>
+       <td width="120" valign="top">PHP 版本：</td>
+       <td valign="top"><?=PHP_VERSION?></td>
+       <td width="100" valign="top">当前管理员IP：</td>
+       <td valign="top">
+         <?=$_SERVER['SERVER_ADDR']?>
+       </td>
+       <td width="100" valign="top">服务器操作系统：</td>
+       <td valign="top"><?=PHP_OS?></td>
+      </tr>
+      <tr>
+       <td valign="top">文件上传限制：</td>
+       <td valign="top"><?=get_cfg_var("upload_max_filesize")?get_cfg_var("upload_max_filesize"):"不允许上传附件";?></td>
+       <td valign="top">GD 库支持：</td>
+       <td valign="top"><?=function_exists('gd_info')?'是':'否'?></td>
+       <td valign="top">Web 服务器：</td>
+       <td valign="top"><?=apache_get_version()?></td> 
+      </tr>
+     </table>
+    </ul>
+   </div>
+   <div class="indexBox">
+    <div class="boxTitle">网站信息</div>
+    <ul>
+     <table width="100%" border="0" cellspacing="0" cellpadding="7" class="tableBasic">
+      <tr>
+       <td width="120" valign="top">注册人数：</td>
+       <td valign="top"><?=$result[0]['total']?></td>
+       <td width="100" valign="top">商品数：</td>
+       <td valign="top">
+         <?=$result1[0]['total']?>
+       </td>
+       <td width="100" valign="top">有效订单：</td>
+       <td valign="top"><?=$result2[0]['total']?></td>
+      </tr>
+      <tr>
+       <td valign="top">待支付订单数：</td>
+       <td valign="top"><?=$result3[0]['total']?></td>
+       <td valign="top">待发货订单数：</td>
+       <td valign="top"><?=$result4[0]['total']?></td>
+       <td valign="top">待收货订单数：</td>
+       <td valign="top"><?=$result5[0]['total']?></td> 
+      </tr>
+     </table>
+    </ul>
+   </div>
+   <div class="indexBox">
+    <div class="boxTitle">系统开发</div>
+    <ul>
+     <table width="100%" border="0" cellspacing="0" cellpadding="7" class="tableBasic">
+      <tr>
+       <td width="120"> 系统版本： </td>
+       <td>V 3.0</td>
+      </tr>
+      <tr>
+       <td> 技术支持： </td>
+       <td> 吴金伟</td>
+      </tr>
+      
+     </table>
+    </ul>
+   </div>
+  </div>  
+  </div>
+  </body>
+  </html>

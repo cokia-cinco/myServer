@@ -1,0 +1,102 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>小米商城网站管理系统</title>
+<link href="<?=ADMIN_CSS?>public.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="<?=ADMIN_jS?>jquery.min.js"></script>
+<script type="text/javascript" src="<?=ADMIN_jS?>global.js"></script>
+<script type="text/javascript">
+$(function(){
+  
+  $("input[type='button']").click(function(){
+    var len = $("input.one[type='checkbox']:checked").length;
+    var action=$(this).attr('id');
+    if(len>0){
+      $('#form').attr("action","action.php?act="+action);
+      $('#form').submit();
+    }else{
+      alert("请选择需要操作的信息!");
+    }
+  });
+})
+</script>
+</head>
+<body>
+<div id="dcMain1"> 
+<div id="urHere">小米商城 管理中心</div>  <div id="index" class="mainBox" style="padding-top:18px;height:auto!important;height:550px;min-height:550px;">
+   <h3>
+   <a href="javascript:location.reload();" class="actionBtn" style="margin-right:10px;">刷新</a>已评论订单管理</h3>  
+   
+   <div class="indexBox">
+    
+    <form name="" id="form" action="productlist.php" method="post">
+     <?php if (empty($arrayName)): ?>
+       <div>
+          <p style="margin:40px 0 ;text-align: center;color:#b0b0b0;font-size: 18px;">当前没有已评论订单</p>
+      </div>
+     <?php else: ?>
+     <?php foreach ($arrayName as $key => $value): ?>
+        <table width="100%" border="0" style="margin-top:20px;" cellspacing="0" cellpadding="7" class="tableBasic">
+          <tr>
+          <td colspan="7">
+          订单号：<?=$value['ordernum']?>  
+          订单时间：<?=$value['createtime']?> 
+          订单状态：
+            <?php if ($value['status']==0): ?>
+              <b class="red mr15">待支付</b>
+            <?php elseif($value['status']==1):?>
+              <b class="blue mr15">已付款 <a href="">发货</a></b>
+            <?php elseif($value['status']==2):?>
+              <b style="color: green;" class="mr15">待收货</b>
+            <?php elseif($value['status']==3):?>
+              <b style="color: orange;" class="mr15">交易完成</b>
+            <?php elseif($value['status']==6):?>
+              <b style="color: pink;" class="mr15">已评论</b>
+            <?php endif ?>
+        
+              
+               </td>
+          </tr>
+          <tr>
+           <th width="50" >订单ID</th>
+           <th width="20%">商品名称</th>
+           <th width="20%">缩略图</th>
+           <th width="10%">价格</th>       
+           <th width="15%">数量</th>
+           <th width="15%">小计</th>
+           <th width="13%"> </th>
+          </tr>
+          <?php foreach ($value['goods'] as $key => $value1): ?>
+            
+          
+                <tr style="text-align:center;">
+            <td><?=$value['id']?></td>
+            <td><?=$value1['gname']?></td>
+            <td><img src="<?=imgPath(UPLOAD, $value1['iname']);?>" style="width:160px;height:120px;"/></td>
+            <td>￥<?=$value1['price']?></td>
+            <td><?=$value1['qty']?></td>
+            <td>￥<?=$value1['price']*$value1['qty']?></td>
+            <td></td>
+          </tr>
+          <?php endforeach ?>
+      
+     </table>
+
+     <?php endforeach ?>
+     <?php endif ?>
+      </form>
+   </div>
+   <div class="page">
+    
+
+    <?php if (!empty($arrayName)): ?>
+                        <div style="text-align: center;">
+                        <?php echo $page->show() ?> 
+                    </div>
+                    <?php endif ?>
+ 
+  </div>  
+  </div>
+  </body>
+  </html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>小米网站管理系统</title>
+<link href="<?=ADMIN_CSS?>public.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="<?=ADMIN_JS?>jquery.min.js"></script>
+<script type="text/javascript" src="<?=ADMIN_JS?>global.js"></script>
+<script type="text/javascript" src="<?=ADMIN_JS?>admin.js"></script>
+</head>
+<body>
+<div id="dcWrap"> 
+  <div id="dcHead">
+   <div id="head">
+    <div class="logo"><a href="index.html"><img src="<?=ADMIN_IMG?>dclogo.gif" alt="logo"></a></div>
+    <div class="nav">     
+     <ul class="navRight">
+      <li class="M noLeft">
+        <a href="JavaScript:void(0);">您好，<?=$_SESSION['admin']['name']?></a>
+        <div class="drop mUser">
+          <a href="editadmin.php?id=1" target="main">编辑我的个人资料</a>
+        </div>
+      </li>
+      <li class="noRight"><a href="index.php?c=Login&a=logout">退出</a></li>
+     </ul>
+    </div>
+   </div>
+  </div>
+  <!-- dcHead 结束 --> 
+  <div id="dc">
+    <div id="dcLeft">
+      <div id="menu">
+       <ul class="top">
+        <li><a href="index.php?a=main" target="main"><i class="home"></i><em>管理首页</em></a></li>
+       </ul>
+       <ul>
+        <!-- <li><a href="system.html" target="main"><i class="system"></i><em>企业信息管理</em></a></li> -->
+        <li><a href="index.php?c=admin&a=index" target="main"><i class="manager"></i><em>网站管理员</em></a></li>
+        <li><a href="index.php?c=User&a=index" target="main"><i class="manager"></i><em>用户管理</em></a></li>
+        <li><a href="index.php?c=category&a=index" target="main"><i class="manager"></i><em>分类目录管理</em></a></li>           
+        <!-- <li><a href="page.html" target="main"><i class="page"></i><em>单页面管理</em></a></li> -->
+       </ul>
+       <ul>
+        <!-- <li><a href="nav.html" target="main"><i class="nav"></i><em>自定义导航栏</em></a></li> -->
+        <!-- <li><a href="show.html" target="main"><i class="show"></i><em>首页幻灯广告</em></a></li> -->
+        <!-- <li><a href="product_category.html" target="main"><i class="productCat"></i><em>产品分类</em></a></li> -->
+        <li><a href="index.php?c=category&a=index" target="main"><i class="productCat"></i><em>商品分类目录管理</em></a></li>
+        <li><a href="index.php?c=goods&a=index" target="main"><i class="product"></i><em>产品列表</em></a></li>
+        <!-- <li><a href="news_category.html" target="main"><i class="articleCat"></i><em>纺织动态分类</em></a></li> -->
+        <!-- <li><a href="newslist.html" target="main"><i class="article"></i><em>纺织动态列表</em></a></li> -->
+        <!-- <li><a href="job.html" target="main"><i class="user"></i><em>招聘列表</em></a></li> -->
+        <!-- <li><a href="message.html" target="main"><i class="guestbook"></i><em>咨询列表</em></a></li> -->
+       </ul>
+       <ul>
+        <li><a href="index.php?c=order" target="main"><i class="order"></i><em>订单管理</em></a></li>
+        <li><a href="index.php?c=order&a=unpaid" target="main"><i class="order"></i><em>待支付订单管理</em></a></li>
+        <li><a href="index.php?c=order&a=waitgoods" target="main"><i class="order"></i><em>待发货订单管理</em></a></li>
+        <li><a href="index.php?c=order&a=waiting" target="main"><i class="order"></i><em>待收货订单管理</em></a></li>
+        <li><a href="index.php?c=order&a=complete" target="main"><i class="order"></i><em>交易完成订单管理</em></a></li>
+        <li><a href="index.php?c=order&a=cancel" target="main"><i class="order"></i><em>已取消订单管理</em></a></li>
+        <li><a href="index.php?c=order&a=comments" target="main"><i class="order"></i><em>已评论订单管理</em></a></li>
+         
+       </ul>
+      </div>
+    </div>
+    <!-- dcLeft 结束 -->
+    <div id="dcMain"> 
+      <iframe src="index?a=main" width="100%" height="100%" frameborder="0" scrolling="auto" name="main"></iframe>
+    </div>
+    <!-- dcMain 结束 -->
+  </div>
+  <!-- dc结束 -->
+  <div class="clear"></div>
+  <div id="dcFooter">
+   <div id="footer">
+    <div class="line"></div>
+      <ul>
+       版权所有 © 2019- 吴金伟，并保留所有权利。
+      </ul>
+   </div>
+  </div>
+  <!-- dcFooter 结束 -->
+  <div class="clear"></div> 
+</div>
+<!-- dcWrap 结束 -->
+</body>
+</html>

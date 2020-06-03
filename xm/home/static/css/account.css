@@ -1,0 +1,312 @@
+body,ul,li,ol,a,dl,dt,dd,h1,h2,h3,h4,h5,h6,div,p,fieldset{ margin: 0; padding: 0; }
+body{ font: 14px arial,"Hiragino Sans GB", "Microsoft YaHei","微軟正黑體","儷黑 Pro", sans-serif}
+li{list-style:none;}
+a{text-decoration: none;}
+table{border-collapse: collapse;}
+em{font-style:normal;}
+input{outline: none}
+li{list-style-type:none;}
+a{text-decoration:none;} 
+
+div::after{
+    content: " ";
+    display: block;
+    clear: both;
+}
+
+ul::after{
+    content: " ";
+    display: block;
+    clear: both;
+}
+
+body{
+  background-color: #f5f5f5;
+}
+
+.icon {
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.15em;
+  fill: currentColor;
+  overflow: hidden;
+}
+
+.wrap{
+  background-color: #f5f5f5;
+}
+
+.layout{
+  width: 960px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.n-logo-area{
+  padding: 50px 0;
+  height: 31px;
+  line-height: 31px;
+}
+
+.n-account-area{
+  position: absolute;
+  right: 36px;
+  top: 114px;
+
+}
+
+.na-info{
+  width: 120px;
+  text-align: right;
+  padding-top: 16px;
+  margin-right: 10px;
+  float: left;
+}
+
+.na-name{
+  color: #333;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 21px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.na-num{
+  position: relative;
+  z-index: 10;
+  color: #666;
+  height: 16.8px;
+}
+
+.na-img-area{
+  width: 80px;
+  height: 80px;
+  border: 2px solid #e3e3e3;
+  border-radius: 50%;
+  padding: 4px;
+  position: relative;
+  z-index: 4;
+  float: left;
+}
+
+.na-img-bg-area{
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.na-img-bg-area img{
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  vertical-align: middle;
+}
+
+.fl-1{
+  float: left;
+}
+
+.fl-1 img{
+  vertical-align: middle;
+}
+
+.fl-r{
+  color: #ababab;
+  float: right;
+
+}
+
+.n-main-nav{
+  overflow: hidden;
+  position: relative;
+  z-index: 2;
+  margin-bottom: -1px;
+}
+
+.c_b{
+  width: 73%;
+  overflow: hidden;
+}
+
+.n-main-nav li{
+  float: left;
+  text-align: center;
+  width: 20%;
+  height: 44px;
+  overflow: hidden;
+
+}
+
+.n-main-nav li a{
+  color: #333;
+  display: block;
+  padding: 0 34px;
+  font-weight: bold;
+  line-height: 20px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.n-frame{
+  background-color: #fff;
+  padding: 34px 34px 0;
+  border: 1px solid #e6e6e6;
+  border-radius: 10px;
+  min-height: 400px;
+}
+
+.title-item{
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e6e6e6;
+  clear: both;
+}
+
+.title-big{
+  font-size: 20px;
+  color: #333;
+  height: 30px;
+  font-weight: bold;
+  display: inline-block;
+}
+
+.space6{
+  width: 6px;
+  display: inline-block;
+  height: 12px;
+  
+}
+
+.font-normal{
+  font-size: 14px;
+  color: #9d9d9d;
+  height: 30px;
+  display: inline-block;
+}
+
+.light-num{
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.score_4{
+  color: rgb(51, 204, 0)
+}
+
+.slider-area{
+  width: 360px;
+  display: inline-block;
+  position: relative;
+}
+
+.slider-bar-bg{
+  border: 1px solid #ddd;
+  background-color: #e6e6e6;
+  height: 2px;
+  overflow: hidden;
+  
+}
+
+.slider-bar-line{
+  background-color: rgb(51, 204, 0);
+  height: 4px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  overflow: hidden;
+  width: 100%;
+}
+
+.drag-ico{
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  top: -6px;
+  z-index: 2;
+  background: url('../img/account/drag-ico.png') 0 0 no-repeat;
+  left: 100%;
+}
+
+.security_level_txt{
+  margin-left: 20px;
+  display: inline-block;
+}
+
+.click-row{
+  padding: 30px 0;
+  position: relative;
+  border-bottom: 1px solid #f2f2f2;
+  margin-bottom: -1px;
+}
+
+.font-img-item{
+  position: relative;
+  overflow: hidden;
+  padding: 0 0 0 56px;
+  height: 45px;
+}
+
+.fi-ico{
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background: url('../img/account/device-icos.png') 0 0 no-repeat;
+}
+
+.font-img-item .fi-ico{
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.fi-ico-lock{
+  background-position: 0px 0;
+}
+
+.font-img-item .title-normal{
+  vertical-align: middle;
+  color: #555;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.font-img-item .font-default{
+  color: #9d9d9d;
+  line-height: 21px;
+
+}
+
+.ada-btn-area{
+  position: absolute;
+  top: 40px;
+  right: 0;
+}
+
+.n-btn{
+  display: inline-block;
+  line-height: normal !important;
+  color: #555;
+  border: 1px solid #e8e8e8;
+  padding: 7px 40px;
+  background-color: #fff;
+  margin-left: 10px;
+}
+
+.fi-ico-email{
+  background-position: -40px 0;
+}
+
+.fi-ico-phone{
+  background-position: -200px 0;
+}
+
+.fi-ico-secret{
+  background-position: -80px 0;
+}

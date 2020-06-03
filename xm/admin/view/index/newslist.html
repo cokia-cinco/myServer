@@ -1,0 +1,211 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>启航纺织网站管理系统</title>
+<link href="css/public.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/global.js"></script>
+<script type="text/javascript">
+$(function(){
+
+  $("input[type='button']").click(function(){
+    var len = $("input.one[type='checkbox']:checked").length;
+    var action=$(this).attr('id');
+    if(len>0){
+      $('#form').attr("action","action.php?act="+action);
+      $('#form').submit();
+    }else{
+      alert("请选择需要操作的信息!");
+    }
+  });
+})
+</script>
+</head>
+<body>
+<div id="dcMain1"> 
+<div id="urHere">启航纺织 管理中心</div>  <div id="index" class="mainBox" style="padding-top:18px;height:auto!important;height:550px;min-height:550px;">
+   <h3><a href="addnews.html" class="actionBtn">添加纺织动态</a>
+   <a href="javascript:location.reload();" class="actionBtn" style="margin-right:10px;">刷新</a>纺织动态列表</h3>  
+   
+   <div class="indexBox">
+    
+    <form name="" id="form" action="newslist.php" method="post">
+     <table width="100%" border="0" cellspacing="0" cellpadding="7" class="tableBasic">
+      <tr>
+       <th width="50" ><input type="checkbox" id="all">全选</th>
+       <th width="30%">动态标题</th>
+       <th width="10%">动态类型</th>
+       <th width="10%">访问量</th>
+       <th width="15%">来源</th>
+       <th width="15%">发布时间</th>
+       <th width="13%">操作</th>
+      </tr>
+          
+      <tr>
+       <td align="center"> <input type="checkbox" name="id[]" class="one" value="16"/></td>
+       <td align="center"> 台湾纺织大老：明年营运景气一定比今年好</td>
+       <td align="center"> 公司要闻</td>
+       <td align="center"> 7</td>
+       <td align="center"> 百业网 </td>
+       <td align="center"> 2018-01-31 09:50:37</td>
+       <td align="center"> 
+       <a href="editnews.php?id=16">编辑</a> |
+       <a href="javascript:if(confirm('是否删除该信息?'))location='action.php?act=delnews&id=16';">删除</a> </td>
+      </tr>
+          
+      <tr>
+       <td align="center"> <input type="checkbox" name="id[]" class="one" value="15"/></td>
+       <td align="center"> 9月中国棉花周转库存报告 库存总量约55.96万吨</td>
+       <td align="center"> 公司要闻</td>
+       <td align="center"> 1</td>
+       <td align="center"> 全球纺织网 </td>
+       <td align="center"> 2018-01-31 09:30:35</td>
+       <td align="center"> 
+       <a href="editnews.php?id=15">编辑</a> |
+       <a href="javascript:if(confirm('是否删除该信息?'))location='action.php?act=delnews&id=15';">删除</a> </td>
+      </tr>
+          
+      <tr>
+       <td align="center"> <input type="checkbox" name="id[]" class="one" value="9"/></td>
+       <td align="center"> 柯桥区B2B、B2C跨境电商风生水起</td>
+       <td align="center"> 纺织业界</td>
+       <td align="center"> 4</td>
+       <td align="center"> 全球纺织网 </td>
+       <td align="center"> 2017-12-12 14:55:13</td>
+       <td align="center"> 
+       <a href="editnews.php?id=9">编辑</a> |
+       <a href="javascript:if(confirm('是否删除该信息?'))location='action.php?act=delnews&id=9';">删除</a> </td>
+      </tr>
+          
+      <tr>
+       <td align="center"> <input type="checkbox" name="id[]" class="one" value="8"/></td>
+       <td align="center"> “一带一路”纺织服装分享汇助推纺城布满全球【图】</td>
+       <td align="center"> 公司要闻</td>
+       <td align="center"> 29</td>
+       <td align="center"> 全球纺织网1111 </td>
+       <td align="center"> 2017-10-12 20:45:45</td>
+       <td align="center"> 
+       <a href="editnews.php?id=8">编辑</a> |
+       <a href="javascript:if(confirm('是否删除该信息?'))location='action.php?act=delnews&id=8';">删除</a> </td>
+      </tr>
+          
+      <tr>
+       <td align="center"> <input type="checkbox" name="id[]" class="one" value="7"/></td>
+       <td align="center"> 广东省质监局抽查155批次服装产品 不合格49批次</td>
+       <td align="center"> 公司要闻</td>
+       <td align="center"> 4</td>
+       <td align="center"> 全球纺织网 </td>
+       <td align="center"> 2017-10-11 16:59:05</td>
+       <td align="center"> 
+       <a href="editnews.php?id=7">编辑</a> |
+       <a href="javascript:if(confirm('是否删除该信息?'))location='action.php?act=delnews&id=7';">删除</a> </td>
+      </tr>
+          
+      <tr>
+       <td align="center"> <input type="checkbox" name="id[]" class="one" value="6"/></td>
+       <td align="center"> 研究报告称牛仔染整剂市场2025年达 22.1亿美元</td>
+       <td align="center"> 公司要闻</td>
+       <td align="center"> 2</td>
+       <td align="center"> 全球纺织网 </td>
+       <td align="center"> 2017-10-10 13:12:25</td>
+       <td align="center"> 
+       <a href="editnews.php?id=6">编辑</a> |
+       <a href="javascript:if(confirm('是否删除该信息?'))location='action.php?act=delnews&id=6';">删除</a> </td>
+      </tr>
+          
+      <tr>
+       <td align="center"> <input type="checkbox" name="id[]" class="one" value="5"/></td>
+       <td align="center"> 郑州新郑综保区进口服装包机业务翻倍增</td>
+       <td align="center"> 公司要闻</td>
+       <td align="center"> 2</td>
+       <td align="center"> 全球纺织网 </td>
+       <td align="center"> 2017-10-09 09:25:45</td>
+       <td align="center"> 
+       <a href="editnews.php?id=5">编辑</a> |
+       <a href="javascript:if(confirm('是否删除该信息?'))location='action.php?act=delnews&id=5';">删除</a> </td>
+      </tr>
+          
+      <tr>
+       <td align="center"> <input type="checkbox" name="id[]" class="one" value="4"/></td>
+       <td align="center"> 纺织品“阻燃”有讲究 外贸企业需关注</td>
+       <td align="center"> 公司要闻</td>
+       <td align="center"> 1</td>
+       <td align="center"> 全球纺织网 </td>
+       <td align="center"> 2017-10-07 01:52:25</td>
+       <td align="center"> 
+       <a href="editnews.php?id=4">编辑</a> |
+       <a href="javascript:if(confirm('是否删除该信息?'))location='action.php?act=delnews&id=4';">删除</a> </td>
+      </tr>
+          
+      <tr>
+       <td align="center"> <input type="checkbox" name="id[]" class="one" value="3"/></td>
+       <td align="center"> 用化学危险品印染衣物 旅顺一老板被移送检察机关</td>
+       <td align="center"> 公司要闻</td>
+       <td align="center"> 3</td>
+       <td align="center"> 全球纺织网 </td>
+       <td align="center"> 2017-10-05 22:05:45</td>
+       <td align="center"> 
+       <a href="editnews.php?id=3">编辑</a> |
+       <a href="javascript:if(confirm('是否删除该信息?'))location='action.php?act=delnews&id=3';">删除</a> </td>
+      </tr>
+          
+      <tr>
+       <td align="center"> <input type="checkbox" name="id[]" class="one" value="2"/></td>
+       <td align="center"> 9月中国棉花周转库存报告 库存总量约55.96万吨</td>
+       <td align="center"> 公司要闻</td>
+       <td align="center"> 2</td>
+       <td align="center"> 全球纺织网 </td>
+       <td align="center"> 2017-10-04 18:19:05</td>
+       <td align="center"> 
+       <a href="editnews.php?id=2">编辑</a> |
+       <a href="javascript:if(confirm('是否删除该信息?'))location='action.php?act=delnews&id=2';">删除</a> </td>
+      </tr>
+          
+      <tr>
+       <td align="center"> <input type="checkbox" name="id[]" class="one" value="1"/></td>
+       <td align="center"> 台湾纺织大老：明年营运景气一定比今年好</td>
+       <td align="center"> 公司要闻</td>
+       <td align="center"> 5</td>
+       <td align="center"> 全球纺织网 </td>
+       <td align="center"> 2018-07-25 10:42:28</td>
+       <td align="center"> 
+       <a href="editnews.php?id=1">编辑</a> |
+       <a href="javascript:if(confirm('是否删除该信息?'))location='action.php?act=delnews&id=1';">删除</a> </td>
+      </tr>
+            <tr>
+        <td colspan="7">
+          <input type="button" value="批量删除" id="delnewsall" class="btnc03 mr15"/>
+          批量转移动态信息：
+          <select name="cid">  
+                       
+            <option value="1">公司要闻</option>         
+                       
+            <option value="2">纺织业界</option>         
+                       
+            <option value="3">纺织知识</option>         
+                      </select>
+          <input type="button" value="转移" id="movenewsall" class="btnf60 mr15"/>
+          批量复制：
+          <select name="cid2">  
+                       
+            <option value="1">公司要闻</option>         
+                       
+            <option value="2">纺织业界</option>         
+                       
+            <option value="3">纺织知识</option>         
+                      </select>
+          <input type="button" value="复制" id="copynewsall" class="btn mr15"/>
+          <input type="text" name="kw" placeholder="请输入关键词……" class="inpFlie w300">
+          <input type="submit" value="搜索" id="searchnews" class="btn9c6"/>
+        </td>
+      </tr>
+     </table>
+    </form>
+   </div>
+   <div class="page">
+    <ul><li><a href="?page=1" title="首页">&laquo;</a></li><li><a href="javascript:vido();">&lt;</a></li><li class="active"><a href="?page=1">1</a></li><li><a href="javascript:vido();">&gt;</a></li><li><a href="?page=1" title="尾页">&raquo;</a></li><li style="margin-left:20px;">共1页，转到 <SELECT style="margin-top:5px;" NAME="select" ONCHANGE="var jmpURL=this.options[this.selectedIndex].value ; if(jmpURL!='') {window.location=jmpURL;} else {this.selectedIndex=0 ;}" ><option value="?page=1"  selected="selected">1</option></SELECT></li></ul>   </div>
+  </div>  
+  </div>
+  </body>
+  </html>

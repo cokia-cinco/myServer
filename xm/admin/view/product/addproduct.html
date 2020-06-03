@@ -1,0 +1,134 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>小米商城网站管理系统</title>
+<meta name="Copyright" content="Douco Design." />
+<link href="<?=ADMIN_CSS?>public.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="<?=ADMIN_JS?>jquery.min.js"></script>
+<script type="text/javascript" src="<?=ADMIN_JS?>global.js"></script>
+<link rel="stylesheet" href="<?=ADMIN_JS?>kindeditor/themes/default/default.css" />
+<link rel="stylesheet" href="<?=ADMIN_JS?>kindeditor/plugins/code/prettify.css" />	
+    <script charset="utf-8" src="<?=ADMIN_JS?>kindeditor/kindeditor-min.js"></script>
+    <script charset="utf-8" src="<?=ADMIN_JS?>kindeditor/lang/zh_CN.js"></script>
+    <script charset="utf-8" src="<?=ADMIN_JS?>kindeditor/plugins/code/prettify.js"></script>
+    <script>
+      var editor;
+      KindEditor.ready(function(K) {
+        editor = K.create('textarea[name="content"]', {
+          allowFileManager : true
+        });
+        K('#upimg').click(function() {
+          editor.loadPlugin('image', function() {
+            editor.plugin.imageDialog({
+              imageUrl : K('#image').val(),
+              clickFn : function(url, title, width, height, border, align) {
+                K('#image').val(url);
+                $('#imglist').html('<img src="'+url+'" style="width:298px;height:169px;"/>');
+                editor.hideDialog();
+              }
+            });
+          });
+        });
+      });
+    </script>
+</head>
+<body>
+<div id="dcMain1"> 
+<div id="urHere">小米商城 管理中心</div>  <div id="index" class="mainBox" style="padding-top:18px;height:auto!important;height:550px;min-height:550px;">
+   <h3><a href="index.php?c=goods" class="actionBtn">返回列表</a>产品管理 > 添加产品</h3>  
+   
+   <div class="indexBox">
+    
+    <form action="index.php?c=goods&a=doAdd"  method="post" enctype="multipart/form-data">
+     <table width="100%" border="0" cellspacing="0" cellpadding="7" class="tableBasic">
+      <tr>
+       <td width="200" align="right">产品名称</td>
+       <td width="*">
+          <input type="text" name="gname" id="name" class="inpFlie w500" />
+       </td>
+      </tr>
+      <tr>
+       <td width="200" align="right">产品类别</td>
+       <td width="*">
+          <select name="cate_id"> 
+            <?php if (!empty($cate)): ?>
+            <?php foreach ($cate as $val): ?>
+                <option value="<?= $val['id'] ?>">
+                    <?php 
+                        echo str_repeat('&nbsp;&nbsp;&nbsp;', substr_count($val['path'], ',')).'---'.$val['cname'];
+                     ?>
+
+                </option>
+            <?php endforeach ?>
+            <?php endif ?> 
+                       
+            
+          </select>
+       </td>
+      </tr>
+      
+      <tr>
+       <td width="200" align="right">缩略图</td>
+       <td width="*">
+        <input type="file" name="goodsIMG">
+          <!-- <img src="images/upimg.jpg" id="upimg" style="border:1px #999 dashed;cursor:pointer;"/>
+          <span id="imglist"></span>
+          <input type="hidden" id="image" name="image" /> -->
+       </td>
+      </tr>
+      <tr>
+       <td width="200" align="right">价格</td>
+       <td width="*">
+          <input type="text" name="price" id="price" class="inpFlie w500" />
+       </td>
+      </tr>
+      <tr>
+       <td width="200" align="right">原价</td>
+       <td width="*">
+          <input type="text" name="original_cost" id="price" class="inpFlie w500" />
+       </td>
+      </tr>
+      <tr>
+       <td width="200" align="right">库存</td>
+       <td width="*">
+          <input type="text" name="stock" id="chengfen" class="inpFlie w500" />
+       </td>
+      </tr>
+
+      <tr>
+       <td width="200" align="right">置顶</td>
+       <td width="*">
+          <input type="checkbox" name="istop" id="istop" value="1"/>
+       </td>
+      </tr>
+      <tr>
+       <td width="200" align="right">广告语</td>
+       <td width="*">
+          <textarea name="slogan" id="msg" style="width:90%;"></textarea>
+       </td>
+      </tr>
+      
+      <tr>
+       <td width="200" align="right">商品描述</td>
+       <td width="*">
+          <textarea name="msg" id="msg" style="width:90%;height:500px;"></textarea>
+       </td>
+      </tr>
+      
+      <tr>
+       <td width="200"></td>
+       <td width="*">
+          <input type="submit" name="submit" id="submit" class="btn" value="提交" />
+       </td>
+      </tr>
+      
+     </table>
+     </form>
+    
+   </div>
+   
+  </div>  
+  </div>
+  </body>
+  </html>

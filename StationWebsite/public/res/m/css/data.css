@@ -1,0 +1,121 @@
+.data {
+	background-color:rgba(34,37,49,1);
+	padding-top:2.1rem;
+	padding-bottom:.5rem;
+}
+.dataC {
+	background:rgba(43,46,61,1);
+	border-radius:.17rem;
+	padding:.5rem;
+    padding-bottom: .2rem;
+}
+.data_t {
+	text-align:center;
+	margin-top:1.02rem;
+	margin-bottom:.42rem;
+}
+.data_t .d_p {
+	color:#fff;
+	font-size:.6rem;
+	line-height:1.81rem;
+}
+.data_t .d_news .news_head {
+	border-bottom:1px solid #fff;
+	padding-bottom:.36rem;
+    color:#fff;
+	font-size:.51rem;
+	margin-bottom:.42rem;
+}
+.data_t .d_news .new_body {
+	height:8.6rem;
+}
+.data_t .d_news .new_body ul {
+	overflow:hidden;
+}
+.data_t .d_news .new_body ul .news_li .country,
+.data_t .d_news .news_head .country {
+	width:10%;
+}
+.data_t .d_news .new_body ul .news_li .company,
+.data_t .d_news .news_head .company {
+	width:22%;
+}
+.data_t .d_news .new_body ul .news_li .clause,
+.data_t .d_news .news_head .clause {
+	width:20%;
+}
+.data_t .d_news .new_body ul .news_li .money,
+.data_t .d_news .news_head .money {
+	width:22%;
+}
+.data_t .d_news .new_body ul .news_li .timer,
+.data_t .d_news .news_head .timer {
+	width:26%;
+}
+.data_t .d_news .new_body ul .news_li {
+	font-size:.46rem;
+	color:#fff;
+	margin-bottom:.42rem;
+}
+.data_t .d_news .new_body ul .news_li .country img {
+	width:.4rem;
+}
+
+.data_t .d_news .new_body ul .news_li .clause {
+	color:rgba(24,144,255,1);
+}
+.data_b .data_le {
+	width:7.28rem;
+	height:8.08rem;
+	color:#fff;
+	text-align:left;
+	font-size:.46rem;
+	overflow:hidden;
+	margin-right:.4rem;
+}
+.data_b .data_le .plat_p {
+	text-align:center;
+	font-size:.5rem;
+}
+.data_b .data_le .city_find {
+    padding: 0 .1rem;	
+    margin: .52rem 0;
+}
+.data_b .data_le .city_find .city_img {
+	width:32%;
+}
+.data_b .data_le .city_find .city_img img {
+	width:.83rem;
+    vertical-align: middle;
+}
+.data_b .data_le .city_find .city_cou {
+	width:45%;
+}
+.data_b .data_le .city_find .city_top {
+    width: 23%;
+    text-align: right;
+}
+.data_b .data_ri {
+	text-align:center;
+	color:#fff;
+}
+.data_b .data_ri .d_t {
+	width:7.24rem;
+    height:3.82rem;
+}
+.data_b .data_ri .data_det1 {
+	margin-bottom:.4rem;
+}
+.data_b .data_ri .d_t .plat_p {
+	font-size:.51rem;
+}
+.data_b .data_ri .d_t .plat_all {
+  color:rgba(24,144,255,1);
+  font-weight:600;
+  font-size:1.19rem;
+ margin-top:.3rem;
+}
+.data_b .data_ri .d_t .plat_all p > span {
+  font-size:.59rem;
+  font-weight:400;
+}

@@ -1,0 +1,83 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>小米商城网站管理系统</title>
+<link href="<?=ADMIN_CSS?>public.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="<?=ADMIN_JS?>jquery.min.js"></script>
+<script type="text/javascript" src="<?=ADMIN_JS?>global.js"></script>
+</head>
+<body>
+<div id="dcMain1"> 
+<div id="urHere">小米商城 管理中心</div>  <div id="index" class="mainBox" style="padding-top:18px;height:auto!important;height:550px;min-height:550px;">
+   <h3><a href="adminlist.php" class="actionBtn">返回列表</a>管理员管理 > 编辑管理员</h3>  
+   
+   <div class="indexBox">
+    
+    <form action="index.php?c=admin&a=doEdit"  method="post">
+      <input type="hidden" name="id" value="<?= $list['id'] ?>">
+     <table width="100%" border="0" cellspacing="0" cellpadding="7" class="tableBasic">
+      <tr>
+       <td width="200" align="right">管理员名称</td>
+       <td width="*">
+          <input value="<?= $list['name'] ?>" type="text" name="adminname" id="adminname" class="inpFlie w300" />
+          
+       </td>
+      </tr>
+      <tr>
+       <td width="200" align="right">管理员级别</td>
+       <td width="*">
+          <select name="type">
+            <option value="999" <?php if($list['type']==999){echo "selected";}?> >超级管理员</option>
+             <option value="99"<?php if($list['type']==99){echo "selected";}?>>管理员</option>
+             <option value="9"<?php if($list['type']==9){echo "selected";}?>>页面管理员</option>
+          </select>
+       </td>
+      </tr>
+      <tr>
+       <td width="200" align="right">密码</td>
+       <td width="*">
+          <input value="<?= $list['pwd'] ?>" type="password" name="adminpwd" id="adminpwd" class="inpFlie w300" />
+       </td>
+      </tr>
+      <tr>
+       <td width="200" align="right">确认密码</td>
+       <td width="*">
+          <input value="<?= $list['pwd'] ?>" type="password" name="readminpwd" id="readminpwd" class="inpFlie w300" />
+       </td>
+      </tr>
+      <tr>
+       <td width="200" align="right">管理内容</td>
+       <td width="*">
+          <input type="checkbox" name="manage[]" value="1" <?php if(in_array("1",$manage)){echo "checked";}?>/>企业信息
+          <input type="checkbox" name="manage[]" value="2" <?php if(in_array("2",$manage)){echo "checked";}?>/>管理员
+          <input type="checkbox" name="manage[]" value="3" <?php if(in_array("3",$manage)){echo "checked";}?>/>单页面管理
+          <input type="checkbox" name="manage[]" value="4" <?php if(in_array("4",$manage)){echo "checked";}?>/>自定义导航栏
+          <input type="checkbox" name="manage[]" value="5" <?php if(in_array("5",$manage)){echo "checked";}?>/>首页幻灯广告
+          <input type="checkbox" name="manage[]" value="6" <?php if(in_array("6",$manage)){echo "checked";}?>/>产品分类
+          <input type="checkbox" name="manage[]" value="7" <?php if(in_array("7",$manage)){echo "checked";}?>/>产品列表
+          <input type="checkbox" name="manage[]" value="8" <?php if(in_array("8",$manage)){echo "checked";}?>/>纺织动态分类
+          <input type="checkbox" name="manage[]" value="9" <?php if(in_array("9",$manage)){echo "checked";}?>/>纺织动态列表
+          <input type="checkbox" name="manage[]" value="10" <?php if(in_array("10",$manage)){echo "checked";}?>/>招聘列表
+          <input type="checkbox" name="manage[]" value="11" <?php if(in_array("11",$manage)){echo "checked";}?>/>订单列表
+          <input type="checkbox" name="manage[]" value="12" <?php if(in_array("12",$manage)){echo "checked";}?>/>咨询列表
+
+       </td>
+      </tr>
+      <tr>
+       <td width="200"></td>
+       <td width="*">
+          <input type="submit" name="submit" id="submit" class="btn" value="提交" />
+       </td>
+      </tr>
+      
+     </table>
+     </form>
+    
+   </div>
+   
+  </div>  
+  </div>
+  </body>
+  </html>

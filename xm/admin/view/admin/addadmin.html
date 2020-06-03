@@ -1,0 +1,81 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>小米商城网站管理系统</title>
+<link href="<?=ADMIN_CSS?>public.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="<?=ADMIN_JS?>jquery.min.js"></script>
+<script type="text/javascript" src="<?=ADMIN_JS?>global.js"></script>
+</head>
+<body>
+<div id="dcMain1"> 
+<div id="urHere">小米商城 管理中心</div>  <div id="index" class="mainBox" style="padding-top:18px;height:auto!important;height:550px;min-height:550px;">
+   <h3><a href="index.php?c=admin&a=index" class="actionBtn">返回列表</a>管理员管理 > 添加管理员</h3>  
+   
+   <div class="indexBox">
+    
+    <form action="index.php?c=admin&a=doAdd"  method="post">
+     <table width="100%" border="0" cellspacing="0" cellpadding="7" class="tableBasic">
+      <tr>
+       <td width="200" align="right">管理员名称</td>
+       <td width="*">
+          <input type="text" name="name" id="adminname" class="inpFlie w300" />
+       </td>
+      </tr>
+      <tr>
+       <td width="200" align="right">管理员级别</td>
+       <td width="*">
+          <select name="type">
+             <option value="999">超级管理员</option>
+             <option value="99">管理员</option>
+             <option value="9">页面编辑员</option>
+          </select>
+       </td>
+      </tr>
+      <tr>
+       <td width="200" align="right">密码</td>
+       <td width="*">
+          <input type="password" name="pwd" id="adminpwd" class="inpFlie w300" />
+       </td>
+      </tr>
+      <tr>
+       <td width="200" align="right">确认密码</td>
+       <td width="*">
+          <input type="password" name="repwd" id="readminpwd" class="inpFlie w300" />
+       </td>
+      </tr>
+      <tr>
+       <td width="200" align="right">管理内容</td>
+       <td width="*">
+          <input type="checkbox" name="manage[]" value="1" />企业信息
+          <input type="checkbox" name="manage[]" value="2" />管理员
+          <input type="checkbox" name="manage[]" value="3" />单页面管理
+          <input type="checkbox" name="manage[]" value="4" />自定义导航栏
+          <input type="checkbox" name="manage[]" value="5" />首页幻灯广告
+          <input type="checkbox" name="manage[]" value="6" />产品分类
+          <input type="checkbox" name="manage[]" value="7" />产品列表
+          <input type="checkbox" name="manage[]" value="8" />纺织动态分类
+          <input type="checkbox" name="manage[]" value="9" />纺织动态列表
+          <input type="checkbox" name="manage[]" value="10" />招聘列表
+          <input type="checkbox" name="manage[]" value="11" />订单列表
+          <input type="checkbox" name="manage[]" value="12" />咨询列表
+
+       </td>
+      </tr>
+      <tr>
+       <td width="200"></td>
+       <td width="*">
+          <input type="submit" name="submit" id="submit" class="btn" value="提交" />
+       </td>
+      </tr>
+      
+     </table>
+     </form>
+    
+   </div>
+   
+  </div>  
+  </div>
+  </body>
+  </html>

@@ -1,0 +1,103 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>小米商城网站管理系统</title>
+<link href="<?=ADMIN_CSS?>public.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="<?=ADMIN_JS?>jquery.min.js"></script>
+<script type="text/javascript" src="<?=ADMIN_JS?>global.js"></script>
+</head>
+<body>
+<div id="dcMain1"> 
+<div id="urHere">小米商城 管理中心</div>  <div id="index" class="mainBox" style="padding-top:18px;height:auto!important;height:550px;min-height:550px;">
+   <h3><a href="index.php?c=User&a=index" class="actionBtn">返回列表</a>用户管理 > 用户信息详情</h3>  
+   
+   <div class="indexBox">
+    
+    <form action="index.php?c=user&a=doEdit"  method="post">
+      <input type="hidden" name="id" value="<?= $list['id'] ?>">
+     <table width="100%" border="0" cellspacing="0" cellpadding="7" class="tableBasic">
+      
+      <tr>
+       <td width="200" align="right">用户昵称</td>
+       <td width="*">
+          <input type="text" name="nickname" id="username" class="inpFlie w300" value="<?=$list['nickname'] ?>" readonly />
+       </td>
+      </tr>
+      
+      <tr>
+       <td width="200" align="right">手机号码</td>
+       <td width="*">
+          <input readonly="readonly" type="text" name="tel" id="tel" class="inpFlie w300" value="<?=$list['tel'] ?>"/>
+       </td>
+      </tr>
+      <!-- <tr>
+       <td width="200" align="right">省份</td>
+       <td width="*">
+          <select readonly name="province">
+             <option value="1" <?php if($list['province']=='浙江'){echo "selected";}?> >浙江</option>
+             <option value="2" <?php if($list['province']=='江苏'){echo "selected";}?> >江苏</option>
+             <option value="3" <?php if($list['province']=='上海'){echo "selected";}?> >上海</option>
+             <option value="3" <?php if($list['province']=='北京'){echo "selected";}?> >北京</option>
+             <option value="3" <?php if($list['province']=='天津'){echo "selected";}?> >天津</option>
+             <option value="3" <?php if($list['province']=='重庆'){echo "selected";}?> >重庆</option>
+          </select>
+       </td>
+      </tr> -->
+      <tr>
+       <td width="200" align="right">性别</td>
+       <td width="*">
+          <select readonly name="sex">
+             <option value="1" <?php if($list['sex']==1){echo "selected";}?> >女</option>
+             <option value="2" <?php if($list['sex']==2){echo "selected";}?> >男</option>
+          </select>
+       </td>
+      </tr>
+      <tr>
+       <td width="200" align="right">年龄</td>
+       <td width="*">
+          <input readonly value="<?=$list['age'] ?>" style='width: 50px' type="text" name="age" id="age" class="inpFlie w300" />
+       </td>
+      </tr>
+      <tr>
+       <td width="200" align="right">邮箱</td>
+       <td width="*">
+          <input readonly value="<?=$list['email'] ?>" type="text" name="email" id="email" class="inpFlie w300" />
+       </td>
+      </tr>
+      <tr>
+       <td width="200" align="right">状态</td>
+       <td width="*">
+          <input readonly value="<?=$list['status']?>" style='width: 50px' type="text" name="status" id="status" class="inpFlie w300" />
+       </td>
+      </tr>
+      <!-- <tr>
+       <td width="200" align="right">密码</td>
+       <td width="*">
+          <input type="password" name="adminpwd" id="adminpwd" class="inpFlie w300" />
+       </td>
+      </tr>
+      <tr>
+       <td width="200" align="right">确认密码</td>
+       <td width="*">
+          <input type="password" name="readminpwd" id="readminpwd" class="inpFlie w300" />
+       </td>
+      </tr> -->
+      
+      <!-- <tr>
+       <td width="200"></td>
+       <td width="*">
+          <input type="submit" name="submit" id="submit" class="btn" value="提交" />
+       </td>
+      </tr> -->
+     
+     </table>
+     </form>
+    
+   </div>
+   
+  </div>  
+  </div>
+  </body>
+  </html>

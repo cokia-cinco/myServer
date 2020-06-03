@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>启航纺织网站管理系统</title>
+<link href="css/public.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/global.js"></script>
+<link rel="stylesheet" href="js/kindeditor/themes/default/default.css" />
+    <script charset="utf-8" src="js/kindeditor/kindeditor-min.js"></script>
+    <script charset="utf-8" src="js/kindeditor/lang/zh_CN.js"></script>
+    <script>
+      var editor;
+      KindEditor.ready(function(K) {
+        editor = K.create('textarea[name="content"]', {
+          allowFileManager : true
+        });
+      });
+    </script>
+</head>
+<body>
+<div id="dcMain1"> 
+<div id="urHere">启航纺织 管理中心</div>  <div id="index" class="mainBox" style="padding-top:18px;height:auto!important;height:550px;min-height:550px;">
+   <h3><a href="newslist.html" class="actionBtn">返回列表</a>纺织动态列表 > 添加纺织动态</h3>  
+   
+   <div class="indexBox">
+    
+    <form action="action.php?act=addnews"  method="post">
+     <table width="100%" border="0" cellspacing="0" cellpadding="7" class="tableBasic">
+      <tr>
+       <td width="200" align="right">动态标题</td>
+       <td width="*">
+          <input type="text" name="title" id="title" class="inpFlie w500" />
+       </td>
+      </tr>
+      <tr>
+       <td width="200" align="right">动态类别</td>
+       <td width="*">
+          <select name="cid">  
+                       
+            <option value="1">公司要闻</option>           
+            
+                       
+            <option value="2">纺织业界</option>           
+            
+                       
+            <option value="3">纺织知识</option>           
+            
+                      </select>
+       </td>
+      </tr>
+      <tr>
+       <td width="200" align="right">置顶</td>
+       <td width="*">
+          <input type="checkbox" name="istop" id="istop" value="1"/>
+       </td>
+      </tr>
+      <tr>
+       <td width="200" align="right">来源</td>
+       <td width="*">
+          <input type="text" name="tofrom" id="tofrom" class="inpFlie w500" />
+       </td>
+      </tr>
+      <tr>
+       <td width="200" align="right">动态详情</td>
+       <td width="*">
+          <textarea name="content" id="content" style="width:90%;height:500px;"></textarea>
+       </td>
+      </tr>
+      
+      <tr>
+       <td width="200"></td>
+       <td width="*">
+          <input type="submit" name="submit" id="submit" class="btn" value="提交" />
+       </td>
+      </tr>
+      
+     </table>
+     </form>
+    
+   </div>
+   
+  </div>  
+  </div>
+  </body>
+  </html>

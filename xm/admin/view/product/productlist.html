@@ -1,0 +1,142 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>小米商城网站管理系统</title>
+<link href="<?=ADMIN_CSS?>public.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="<?=ADMIN_JS?>jquery.min.js"></script>
+<script type="text/javascript" src="<?=ADMIN_JS?>global.js"></script>
+<script type="text/javascript">
+$(function(){
+  
+  $("input[type='button']").click(function(){
+    var len = $("input.one[type='checkbox']:checked").length;
+    var action=$(this).attr('id');
+    if(len>0){
+      $('#form').attr("action","action.php?act="+action);
+      $('#form').submit();
+    }else{
+      alert("请选择需要操作的信息!");
+    }
+  });
+})
+</script>
+</head>
+<body>
+<div id="dcMain1"> 
+<div id="urHere">小米商城 管理中心</div>  <div id="index" class="mainBox" style="padding-top:18px;height:auto!important;height:550px;min-height:550px;">
+   <h3><a href="index.php?c=goods&a=add" class="actionBtn">添加产品</a>
+   <a href="javascript:location.reload();" class="actionBtn" style="margin-right:10px;">刷新</a>产品管理</h3> 
+
+   <form style='margin-bottom: 10px;' method="get" action="./index.php">
+        <input type="hidden" name="c" value="goods">
+        <input type="hidden" name="a" value="index">
+
+        <input type="text" name="n" placeholder="请输入关键词……" class="inpFlie w300" value="<?php echo empty($_GET['n'])?'':$_GET['n']; ?>" >
+        <input type="submit" value="搜索" id="searchproduct" class="btn9c6"/>
+   </form> 
+   
+   <div class="indexBox">
+    
+    <form name="" id="form" action="productlist.php" method="post">
+     <table width="100%" border="0" cellspacing="0" cellpadding="7" class="tableBasic">
+      <tr>
+       <th width="50" ><input type="checkbox" id="all">全选</th>
+       <th width="15%">产品名称</th>
+       <th width="10%">产品类型</th>
+       <th width="15%">缩略图</th>
+       <th width="10%">价格</th>
+       <th width="10%">库存</th>
+       <th width="10%">置顶</th>
+       <th width="5%">商品状态</th>
+       <th width="20%">操作</th>
+      </tr>
+          <?php if (empty($list)): ?>
+                    <tr>
+                        <td colspan="9" align="center">
+                            暂无数据
+                        </td>
+                    </tr>
+      <?php else: ?>
+              
+        <?php foreach ($list as $key => $value): ?>
+          
+      <tr>
+       <td align="center"> <input type="checkbox" name="id[]" class="one" value="9"/></td>
+       <td align="center"> <a href="http://wjw.com/home/index.php?c=goods&a=index&id=<?=$value['id']?>" target="_blank"><?=$value['gname']?></a></td>
+       <td align="center">  <?= $value['cname']?></td>
+       <td align="center"> 
+        <?php 
+        $img = imgPath(UPLOAD, $value['iname']);
+         ?>
+  
+        <img src="<?= $img ?>" style="width:160px;height:120px;"/>
+      </td>
+       <td align="center"> <?=$value['price']?></td>
+       <td align="center"> <?=$value['stock']?></td>
+       <td align="center"> 
+        <?php if ($value['istop']==1): ?>
+          <img src="<?=ADMIN_IMG?>mark1.png"/>
+        <?php endif ?>
+        
+
+         </td>
+       <td align="center"> 
+          <?php if ($value['state']==1): ?>
+              <img src="<?=ADMIN_IMG?>mark4.png"/>
+            <?php else: ?>
+              <img src="<?=ADMIN_IMG?>mark.png"/>
+            <?php endif ?>
+
+       </td>
+       <td align="center"> 
+        <?php if ($value['state']==1): ?>
+         <a href="index.php?c=goods&a=state1&v=0&id=<?=$value['id']?>&state=<?=$value['state']?>">下架商品</a> |
+      <?php else: ?>
+        <a href="index.php?c=goods&a=state1&v=1&id=<?=$value['id']?>&state=<?=$value['state']?>">上架商品</a> |
+          
+       <?php endif ?>
+
+
+        <!-- <a href="index.php?c=goods&a=state&id=<?=$value['id']?>&state=<?=$value['state']?>">下架商品</a> | -->
+        <a href="index.php?c=goods&a=editImg&goods_id=<?=$value['id']?>">管理图片</a> |
+       <a href="index.php?c=goods&a=edit&id=<?=$value['id']?>">编辑</a> |
+       <a href="index.php?c=goods&a=detgoods&id=<?=$value['id']?>">详情</a> |
+       <!-- <a href="javascript:if(confirm('是否删除该信息?'))location='action.php?act=delproduct&id=9';">删除</a> |  -->
+       <?php if ($value['istop']==1): ?>
+         <a href="index.php?c=goods&a=istop&v=0&id=<?=$value['id']?>">取消置顶</a>
+      <?php else: ?>
+        <a href="index.php?c=goods&a=istop&v=1&id=<?=$value['id']?>">设置置顶</a>
+          
+       <?php endif ?>
+       
+      </td>
+      
+      </tr>
+          
+      
+          
+     
+          
+       <?php endforeach ?>
+      <?php endif ?>
+          
+          
+      
+          
+      
+          
+      
+
+     </table>
+    </form>
+    
+   </div>
+   <div class="page">
+
+    <?php echo $page->show() ?> 
+  </div>
+  </div>  
+  </div>
+  </body>
+  </html>

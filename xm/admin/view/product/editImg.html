@@ -1,0 +1,102 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>商品管理 - 商品图片管理 </title>
+<link href="<?=ADMIN_CSS?>public.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="<?=ADMIN_JS?>jquery.min.js"></script>
+<script type="text/javascript" src="<?=ADMIN_JS?>global.js"></script>
+</head>
+<body>
+<div id="dcWrap">
+ 
+ <div id="dcMain1">
+   <!-- 当前位置 -->
+<div id="urHere">商品管理<b>></b><strong>商品图片管理</strong> </div>   <div class="mainBox imgModule">
+    <h3>商品图片管理</h3>
+    <table width="100%" border="0" cellpadding="8" cellspacing="0" class="tableBasic">
+    <tr>
+       <th>添加图片</th>
+       <th>图片列表</th>
+     </tr>
+     <tr>
+      <td width="350" valign="top">
+       <form action="index.php?c=goods&a=addimg" class="formEdit" method="post" enctype="multipart/form-data">
+        <input type="hidden" name="goods_id" value="<?= $goods_id ?>">
+        <table width="100%" border="0" cellpadding="8" cellspacing="0" class="tableOnebor">
+         <tr>
+          <td><b>商品名称</b>
+<input readonly="readonly" type="text" name="gname" value="<?=$gname?>" size="20" class="inpMain" />
+          </td>
+         </tr>
+          <tr>
+              <td><b>商品图片</b>
+                <input type="file" name="goodsIMG" class="inpFlie">
+                  <!-- <input type="file" name="goodsIMG" class="inpFlie" /> -->
+                  <a href="http://www.weiqing.com/data/slide/20130514acunau.jpg" target="_blank">
+                  <img src="<?=ADMIN_IMG?>icon_yes.png"></a>          
+              </td>
+          </tr>
+         
+         <!-- <tr>
+          <td><b>是否设置为封面</b>
+<input type="text" name="cover" value="1" size="20" class="inpMain" />
+          </td>
+         </tr> -->
+         <tr>
+          <td>
+                      <!-- <a href="show.php" class="btnGray">取消</a>
+           <input type="hidden" name="id" value="1">
+           <input type="hidden" name="show_img" value="http://www.weiqing.com/data/slide/20130514acunau.jpg">
+                      <input type="hidden" name="token" value="d80a288d" /> -->
+           <input name="submit" class="btn" type="submit" value="提交" />
+          </td>
+         </tr>
+        </table>
+       </form>
+      </td>
+      <td valign="top">
+       <table width="100%" border="0" cellpadding="8" cellspacing="0" class="tableOnebor">
+        <tr>
+         <td width="100" align="center">商品图片</td>
+         <td width="100" align="center">商品图片名称</td>
+         <td width="100" align="center">商品名称</td>
+         <td width="80" align="center">是否为封面</td>
+         <td width="80" align="center">操作</td>
+        </tr>
+
+         <?php if (!empty($list)): ?>
+    <?php foreach ($list as $value): ?>
+        <tr class="active">
+         <td align="center"><a href="http://www.weiqing.com/data/slide/20130514acunau.jpg" target="_blank"><img src="<?= imgPath(UPLOAD, $value['iname']) ?>" width="100" /></a></td>
+         <td align="center"><?=$value['iname']?></td>
+         <td align="center"><?=$gname?></td>
+         <td align="center">
+           <?php if ($value['cover']==1): ?>
+             <img src="<?=ADMIN_IMG?>mark1.png"/>
+           <?php endif ?>
+         </td>
+         <td align="center">
+          
+
+         <!-- <a href="index.php?c=goods&a=cover&v=0&id=<?=$value['id']?>">取消封面</a> -->
+      
+        <a href="index.php?c=goods&a=cover&goods_id=<?= $goods_id ?>&image_id=<?= $value['id'] ?>">设置封面</a>
+          
+     
+
+          | <a href="index.php?c=goods&a=delimg&id=<?=$value['id']?>">删除</a></td>
+        </tr>
+                
+                 <?php endforeach ?>
+    <?php endif ?>
+                
+               </table>
+      </td>
+     </tr>
+    </table>
+   </div>
+ </div>
+ </div>
+</body>
+</html>

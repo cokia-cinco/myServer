@@ -1,0 +1,100 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>小米商城网站管理系统</title>
+<link href="<?=ADMIN_CSS?>public.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="<?=ADMIN_JS?>jquery.min.js"></script>
+<script type="text/javascript" src="<?=ADMIN_JS?>global.js"></script>
+</head>
+<body>
+<div id="dcMain1"> 
+<div id="urHere">小米商城 管理中心</div>  <div id="index" class="mainBox" style="padding-top:18px;height:auto!important;height:550px;min-height:550px;">
+   <h3>
+    <!-- <a href="index.php?c=user&a=adduser" class="actionBtn">添加用户</a> -->
+    用户管理
+  </h3>  
+  <form style='margin-bottom: 15px' method="get" action="./index.php">
+      <input type="hidden" name="c" value="user">
+      <input type="hidden" name="a" value="index">
+
+      <span style='font-size: 16px;font-weight: 700;color: #757575;height: 20px;line-height: 20px;'>按昵称搜索：</span>
+      <input style='border:1px solid #e0e0e0;width: 100px;height: 20px;' type="text" name="n" value="<?php echo empty($_GET['n'])?'':$_GET['n']; ?>" class="text-word">
+      <input type="submit" value="查询" class="text-but" style="background-color: #ff6700;color:#fff;width: 50px;height: 20px;">
+  </form>
+
+   <div class="indexBox">
+    
+    
+     <table width="100%" border="0" cellspacing="0" cellpadding="7" class="tableBasic">
+      <tr>
+       <th width="50" >序号</th>
+       <th width="18%">昵称</th>
+       <th width="12%">手机号</th>
+       <th width="12%">邮箱</th>
+       <th width="12%">性别</th>
+       <th width="12%">年龄</th>
+       <th width="12%">用户状态</th>
+       <th width="18%">操作</th>
+      </tr>
+      
+      <?php if (empty($list)): ?>
+                    <tr>
+                        <td colspan="8" align="center">
+                            暂无数据
+                        </td>
+                    </tr>
+      <?php else: ?>
+              
+        <?php foreach ($list as $key => $value): ?>
+          <tr>
+         <td align="center"> <?=$value['id']?></td>
+         <td align="center"> <?=$value['nickname']?></td>
+         <td align="center"> <?=$value['tel']?></td>
+         <td align="center"> <?=$value['email']?></td>
+         <td align="center"> 
+            <?php
+              if ($value['sex']=='1') {
+                echo '女';
+              } else {
+                echo '男';
+              }
+              
+            ?>
+         </td>
+         <td align="center"> <?=$value['age']?> </td>
+         <td align="center">  
+            <?php if ($value['state']==1): ?>
+              <img src="<?=ADMIN_IMG?>mark4.png"/>
+            <?php else: ?>
+              <img src="<?=ADMIN_IMG?>mark.png"/>
+            <?php endif ?>
+          
+           
+         </td>
+         <td align="center">
+         <?php if ($value['state']==1): ?>
+         <a href="index.php?c=user&a=state&v=0&id=<?=$value['id']?>">拉入黑名单</a> |
+          <?php else: ?>
+        <a href="index.php?c=user&a=state&v=1&id=<?=$value['id']?>">拉出黑名单</a> |
+        <?php endif ?> 
+        <a href="index.php?c=user&a=details&id=<?=$value['id']?>">详情</a> |
+
+         <a href="index.php?c=user&a=edituser&id=<?=$value['id']?>">编辑</a> |
+         <a href="javascript:if(confirm('是否删除该信息?'))location='index.php?c=user&a=del&id=<?=$value['id']?>';">删除</a> </td>
+        </tr>
+          
+        <?php endforeach ?>
+      <?php endif ?>
+          
+      
+           </table>
+    
+   </div>
+   <div class="page">
+    <?php echo $page->show() ?> 
+    </div>
+  </div>  
+  </div>
+  </body>
+  </html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>小米商城网站管理系统</title>
+<link href="<?=ADMIN_CSS?>public.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="<?=ADMIN_JS?>jquery.min.js"></script>
+<script type="text/javascript" src="<?=ADMIN_JS?>global.js"></script>
+</head>
+<body>
+<div id="dcMain1"> 
+<div id="urHere">小米商城 管理中心</div>  <div id="index" class="mainBox" style="padding-top:18px;height:auto!important;height:550px;min-height:550px;">
+   <h3><a href="index.php?c=admin&a=add" class="actionBtn">添加管理员</a>管理员管理</h3>  
+   <form style='margin-bottom: 15px' method="get" action="./index.php">
+      <input type="hidden" name="c" value="admin">
+      <input type="hidden" name="a" value="index">
+
+      <span style='font-size: 16px;font-weight: 700;color: #757575;height: 20px;line-height: 20px;'>按昵称搜索：</span>
+      <input style='border:1px solid #e0e0e0;width: 100px;height: 20px;' type="text" name="n" value="<?php echo empty($_GET['n'])?'':$_GET['n']; ?>" class="text-word">
+      <input type="submit" value="查询" class="text-but" style="background-color: #ff6700;color:#fff;width: 50px;height: 20px;">
+  </form>
+   
+   <div class="indexBox">
+    
+     
+      <table width="100%" border="0" cellspacing="0" cellpadding="7" class="tableBasic">
+        <tr>
+          <th width="50" > </th>
+          <th width="20%">管理员</th>
+          <th width="15%">级别</th>
+          <!-- <th width="13%">手机号</th> -->
+          <th width="20%">登陆IP</th>
+          <th width="20%">创建登陆时间</th>
+          <!-- <th width="15%">创建时间</th> -->
+          <th width="20%">操作</th>
+        </tr>
+            
+            <?php if (empty($list)): ?>
+                    <tr>
+                        <td colspan="8" align="center">
+                            暂无数据
+                        </td>
+                    </tr>
+      <?php else: ?>
+              
+        <?php foreach ($list as $key => $value): ?>
+
+
+        <tr>
+          <td align="center">  </td>
+          <td align="center"> <?=$value['name']?></td>
+          <td align="center"> <?=getLevel($value['type'])?></td>
+          <!-- <td align="center"> <?=$value['tel']?></td> -->
+          <td align="center"> <?=$value['loginip']?> </td>
+          <td align="center"> <?=date("Y-m-d h:i:s",$value['lasttime'])?></td>
+         <!--  <td align="center"> <?=date("Y-m-d h:i:s",$value['createtime'])?></td> -->
+          <td align="center"> 
+          <a href="index.php?c=admin&a=edit&id=<?=$value['id']?>">编辑</a> |
+          <a href="javascript:if(confirm('是否删除该信息?'))location='index.php?c=admin&a=doDel&id=<?=$value['id']?>';">删除</a> </td>
+        </tr>
+         <?php endforeach ?>
+      <?php endif ?>
+          
+      
+      </table>
+    
+   </div>
+   <div class="page">
+    <?php echo $page->show() ?> 
+   </div>
+  </div>  
+  </div>
+  </body>
+  </html>

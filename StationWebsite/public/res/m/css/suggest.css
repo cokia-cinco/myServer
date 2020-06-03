@@ -1,0 +1,54 @@
+.suggest {
+	margin-top:2.54rem;
+}
+.suggest .s_text {
+	height:9.15rem;
+	position:relative;
+	margin-bottom:.42rem;
+}
+.suggest .s_text textarea {
+	width:100%;
+	height:9.15rem;
+	resize:none;
+	border:none;
+	padding:.55rem;
+	color:rgba(118,118,118,1);
+	font-size:.6rem;
+	
+}
+.suggest .s_text .s_pos {
+	position:absolute;
+	right:.42rem;
+	bottom:.42rem;
+	color:rgba(98,98,98,1);
+	font-size:.6rem;
+}
+.suggest .s_tell input {
+	color:rgba(118,118,118,1);
+	font-size:.6rem;
+	padding:.76rem .55rem;
+	border:none;
+	width:100%;
+}
+
+.suggest .s_btn {
+	display:inline-block;
+	margin:.93rem .55rem .76rem .55rem;
+	width:14.91rem;
+	height:1.74rem;
+	line-height:1.74rem;
+	background-color:rgba(24,144,255,1);
+	border-radius:.13rem;
+	color:#fff;
+	font-size:.76rem;
+	text-align:center;
+	
+}
+.suggest .s_p {
+	margin:0 .55rem;
+	color:rgba(118, 118, 118, 1);
+	font-size:.52rem;
+}
+.suggest .s_p a {
+	color:rgba(24, 144, 255, 1);
+}
